@@ -11,6 +11,44 @@
  **SFB**(Start From Busan)🌊
 
 ## Member Introduction
+<table>
+    <tr>
+        <td align="center" width="130px" height="160px">
+            <a href="https://github.com/vodkamitlime"></a>
+            <br />
+            <a href="https://github.com/vodkamitlime">vodkamitlime</a>
+        </td>
+       <td align="center" width="130px" height="160px">
+            <a href="https://github.com/hyoogu"></a>
+            <br />
+            <a href="https://github.com/hyoogu">hyoogu</a>
+        </td>
+        <td align="center" width="130px" height="160px">
+            <a href="https://github.com/jong-ah"></a>
+            <br />
+            <a href="https://github.com/jong-ah">jong-ah</a>
+        </td>
+         <td align="center" width="130px" height="160px">
+            <a href="https://github.com/bmaner"></a>
+            <br />
+            <a href="https://github.com/bmaner">bmaner</a>
+        </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <a>Haeun</a>
+       </td>
+      <td align="center">
+        <a>HyoSeung</a>
+      </td>
+      <td align="center">
+           <a>JongAh</a>
+        </td>
+        <td align="center">
+            <a>SeongHyeon</a>
+        </td>
+    </tr>
+</table>
 
 ## Stack
 
