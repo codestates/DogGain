@@ -1,3 +1,5 @@
-export function login(req, res) {
-  res.status(200).send('hello world!')
+module.exports = {
+  login: function (req, res) {
+    res.status(200).send('hello world!')
+  }
 };
