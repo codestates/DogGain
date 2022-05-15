@@ -10,4 +10,4 @@ app.use(cors());
 
 app.use('/user', userRouter)
 
-app.listen(4000);
+app.listen(80);
