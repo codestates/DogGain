@@ -1,13 +1,19 @@
-import express from 'express'
-import cors from 'cors'
-import userRouter from './router/user.js'
+const express = require('express')
+const cors = require('cors')
+const userRouter = require('./router/user.js')
+const crawl = require('./controllers/deals')
 
 const app = express();
 
 app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
 app.use(cors());
+// app.use(express.urlencoded({ extended: false }));
+
 
 app.use('/user', userRouter)
+// setInterval(function() {
+//   console.log("hello!");
+// }, 3000);
 
-app.listen(4000);
+
+app.listen(80);
