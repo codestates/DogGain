@@ -79,3 +79,23 @@ footer {
 .foot {
   margin-right: 300px;
 }
+.signup {
+  text-align: center;
+  background-color: gold;
+  color: brown;
+  margin-right: 300px;
+  margin-left: 300px;
+}
+.signup-btn {
+  background-color: brown;
+}
+.editprofile {
+  text-align: center;
+  background-color: gold;
+  color: brown;
+  margin-right: 300px;
+  margin-left: 300px;
+}
+.editprofile-btn {
+  background-color: brown;
+}

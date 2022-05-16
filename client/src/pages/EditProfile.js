@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link, useHistory } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Link,
+  useHistory,
+} from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
 function EditProfile() {
@@ -36,16 +42,24 @@ function EditProfile() {
       <div>
         <Header />
       </div>
-      <div>모든 항목은 필수입니다.</div>
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form className="editprofile" onSubmit={(e) => e.preventDefault()}>
+        <div>
+          <Link to="/">다시 메인 페이지로</Link>
+        </div>
+        <div>모든 항목은 필수입니다.</div>
         <div>
           <div>Username</div>
-          <input type="text" onChange={handleInputValue('username')}></input>
+          <input
+            type="text"
+            placeholder="Username"
+            onChange={handleInputValue('username')}
+          ></input>
         </div>
         <div>
           <div>Password</div>
           <input
             type="password"
+            placeholder="Password"
             onChange={handleInputValue('password')}
           ></input>
         </div>
@@ -53,20 +67,27 @@ function EditProfile() {
           <div>Password 확인을 위해 한번 더 입력해주세요.</div>
           <input
             type="passwordCheck"
+            placeholder="Password"
             onChange={handleInputValue('passwordCheck')}
           ></input>
         </div>
         <div>
           <div>Nickname</div>
-          <input type="text" onChange={handleInputValue('nickname')}></input>
+          <input
+            type="text"
+            placeholder="Nickname"
+            onChange={handleInputValue('nickname')}
+          ></input>
         </div>
         <div>
-          <div>Email</div>
-          <input type="email" onChange={handleInputValue('email')}></input>
+          <div>E-mail</div>
+          <input
+            type="email"
+            placeholder="E-mail"
+            onChange={handleInputValue('email')}
+          ></input>
         </div>
-        <div>
-          <Link to="/">다시 메인 페이지로</Link>
-        </div>
+
         <button
           className="editprofile-btn"
           type="submit"
@@ -76,7 +97,7 @@ function EditProfile() {
         </button>
         <div className="alert-box">{errMsg}</div>
       </form>
-      <div>
+      <div className="foot">
         <Footer />
       </div>
     </div>
