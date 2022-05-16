@@ -7,7 +7,7 @@ function Mypage({ userInfo, handleLogout }) {
     <div>
       <div>{nickname}</div>
       <div>
-        <Link to="../pages/EditProfile">회원정보 수정</Link>
+        <Link to="/EditProfile">회원정보 수정</Link>
       </div>
       <div>
         <button classname="logout-btn" onClick={handleLogout}>

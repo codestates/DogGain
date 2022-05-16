@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 function Login({ handleLoginSuccess }) {
   const [loginInfo, setLoginInfo] = useState({
-    username: '',
-    password: '',
+    username: 'L9628',
+    password: '1234',
   });
   const [errMsg, setErrMsg] = useState('');
   const handleInputValue = (key) => (e) => {
@@ -47,7 +47,7 @@ function Login({ handleLoginSuccess }) {
         </button>
       </div>
       <div>
-        <Link to="../pages/Signup">아직 아이디가 없으신가요?</Link>
+        <Link to="/Signup">아직 아이디가 없으신가요?</Link>
       </div>
       <div className="alert-box">{errMsg}</div>
     </div>
