@@ -24,7 +24,7 @@ function App() {
           <Main />
         </div>
       </div>
-      <div>
+      <div className="foot">
         <Footer />
       </div>
       {/* <div>
