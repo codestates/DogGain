@@ -1,6 +1,4 @@
-function Crawling () {
-    return (
-        <div></div>
-    )
+function Crawling() {
+  return <div></div>;
 }
 export default Crawling;

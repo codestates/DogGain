@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
-function Signup() {
+function EditProfile() {
   const [userInfo, setUserInfo] = useState({
     username: '',
     password: '',
@@ -16,18 +16,18 @@ function Signup() {
   const handleInputValue = (key) => (e) => {
     setUserInfo({ ...userInfo, [key]: e.target.value });
   };
-  const handleSignup = () => {
+  const handleEditProfile = () => {
     const { username, password, passwordCheck, nickname, email } = userInfo;
     if (!username || !password || !passwordCheck || !nickname || !email) {
       setErrMsg('모든 항목이 필수입니다.');
     } else {
       axios
-        .post('https://localhost:3000/signup', userInfo, {
+        .post('https://localhost:3000/EditProfile', userInfo, {
           headers: { 'Content-Type': 'application/json' },
           withCredentials: true,
         })
         .then(() => {
-          history.push('/Main');
+          history.push('/');
         });
     }
   };
@@ -67,8 +67,12 @@ function Signup() {
         <div>
           <Link to="/">다시 메인 페이지로</Link>
         </div>
-        <button className="signup-btn" type="submit" onClick={handleSignup}>
-          회원가입
+        <button
+          className="editprofile-btn"
+          type="submit"
+          onClick={handleEditProfile}
+        >
+          회원정보 수정
         </button>
         <div className="alert-box">{errMsg}</div>
       </form>
@@ -78,4 +82,4 @@ function Signup() {
     </div>
   );
 }
-export default Signup;
+export default EditProfile;

@@ -1,13 +1,17 @@
 header {
-    text-align: center;
-    color: black;
-  }
+  text-align: center;
+  color: black;
+}
 .logo {
-  width: 70px;
-  height: 70px;
-  border: 2px solid #333;
+  width: 250px;
+  height: 250px;
   margin: 5px;
   object-fit: cover;
+}
+.head {
+  /* border: 3px solid #333; */
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 footer {
@@ -17,8 +21,61 @@ footer {
 }
 
 .copyright {
-    text-align: left;
-    color: black;
-    font-size: 13px;
-  }
-  
+  text-align: left;
+  color: black;
+  font-size: 13px;
+}
+
+#nav-bar {
+  border: 1px solid #333;
+  padding: 30px;
+  background-color: brown;
+  color: black;
+  display: flex;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.ranking {
+  flex: 1 1 auto;
+}
+.review {
+  flex: 1 1 auto;
+}
+.forum {
+  flex: 1 1 auto;
+}
+.rules {
+  flex: 0 1 auto;
+}
+.content {
+  border: 1px solid #333;
+  display: flex;
+  background-color: gold;
+  height: 70vh;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.sidebar {
+  flex: 1 1 auto;
+  text-align: center;
+  border: 1px solid #333;
+}
+.login {
+  height: 30vh;
+  border: 1px solid #333;
+}
+.filter {
+  height: 30vh;
+  border: 1px solid #333;
+}
+.main {
+  flex: 5 1 auto;
+  text-align: center;
+  border: 1px solid #333;
+}
+.foot {
+  margin-right: 300px;
+}

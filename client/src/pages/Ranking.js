@@ -1,6 +1,4 @@
-function Ranking () {
-    return (
-        <div></div>
-    )
+function Ranking() {
+  return <div></div>;
 }
 export default Ranking;
