@@ -1,6 +1,6 @@
 
 ## LOGO
-![image](https://user-images.githubusercontent.com/69231817/167534185-02d3f401-d70d-4c60-88af-7d47371bb227.png){: width="100" height="100"}
+![image](https://user-images.githubusercontent.com/69231817/167534185-02d3f401-d70d-4c60-88af-7d47371bb227.png)
 
 ## About
 
