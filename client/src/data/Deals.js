@@ -26,8 +26,8 @@ export default [
     origin_title: '에어쉴드 케이스 1 + 1 기종 다양',
     origin_views: '5862',
     origin_price: '5900',
-    origin_created_at: '022-05-15 21:49',
-    origin_updated_at: '022-05-15 21:59',
+    origin_created_at: '2022-05-15 21:49',
+    origin_updated_at: '2022-05-15 21:59',
   },
   {
     id: 2,
