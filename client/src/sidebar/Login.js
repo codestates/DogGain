@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 function Login({ handleLoginSuccess }) {
   const [loginInfo, setLoginInfo] = useState({
-    username: 'L9628',
-    password: '1234',
+    username: '',
+    password: '',
   });
   const [errMsg, setErrMsg] = useState('');
   const handleInputValue = (key) => (e) => {
@@ -16,7 +16,7 @@ function Login({ handleLoginSuccess }) {
       setErrMsg('username과 password를 입력해주세요.');
     } else {
       axios
-        .post('https://localhost:3000/signin', loginInfo, {
+        .post('https://localhost:3000/', loginInfo, {
           headers: { 'Content-Type': 'application/json' },
           withCredentials: true,
         })
@@ -37,7 +37,7 @@ function Login({ handleLoginSuccess }) {
       <div>
         <input
           placeholder="password"
-          type="string"
+          type="password"
           onChange={handleInputValue('password')}
         />
       </div>
@@ -47,7 +47,9 @@ function Login({ handleLoginSuccess }) {
         </button>
       </div>
       <div>
-        <Link to="/Signup">아직 아이디가 없으신가요?</Link>
+        <Link to="/Signup" onClick={() => (window.location.href = '/Signup')}>
+          아직 아이디가 없으신가요?
+        </Link>
       </div>
       <div className="alert-box">{errMsg}</div>
     </div>

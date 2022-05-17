@@ -21,7 +21,7 @@ export default [
     email: 'daegu@daum.net',
   },
   {
-    id: 3,
+    id: 4,
     username: 'ljy',
     nickname: 'sharesmile',
     password: 'u2n3icon',
