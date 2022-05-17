@@ -44,7 +44,9 @@ function EditProfile() {
       </div>
       <form className="editprofile" onSubmit={(e) => e.preventDefault()}>
         <div>
-          <Link to="/">다시 메인 페이지로</Link>
+          <Link to="/" onClick={() => (window.location.href = '/')}>
+            다시 메인 페이지로
+          </Link>
         </div>
         <div>모든 항목은 필수입니다.</div>
         <div>

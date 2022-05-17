@@ -5,9 +5,15 @@ function Mypage({ userInfo, handleLogout }) {
   const { nickname } = userInfo;
   return (
     <div>
+      <div>오늘도 개이득보러 오셨군요!?</div>
       <div>{nickname}</div>
       <div>
-        <Link to="/EditProfile">회원정보 수정</Link>
+        <Link
+          to="/EditProfile"
+          onClick={() => (window.location.href = '/EditProfile')}
+        >
+          회원정보 수정
+        </Link>
       </div>
       <div>
         <button classname="logout-btn" onClick={handleLogout}>
