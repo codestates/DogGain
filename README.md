@@ -1,6 +1,6 @@
 
 ## LOGO
-![image](https://user-images.githubusercontent.com/69231817/167534185-02d3f401-d70d-4c60-88af-7d47371bb227.png)
+<img src = .github/Logo.png width="200" height="200"/>
 
 ## About
 
