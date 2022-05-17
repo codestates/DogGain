@@ -1,6 +1,6 @@
 
 ## LOGO
-<img src = .github/Logo.png width="200" height="200"/>
+<img src = .github/Logo.png width="250" height="250"/>
 
 ## About
 
