@@ -16,12 +16,15 @@
     "express": "^4.18.1",
     "iconv": "^3.0.1",
     "iconv-lite": "^0.6.3",
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.1"
   },
   "keywords": [],
   "description": "",
   "devDependencies": {
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.16",
-    "mysql": "^2.18.1"
+    "sequelize-cli": "^6.4.1"
   }
 }
