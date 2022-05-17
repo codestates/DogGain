@@ -1,23 +1,27 @@
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { Redirect, BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import EditProfile from './pages/EditProfile';
 import Sidebar from './sidebar/Sidebar';
+import Ranking from './pages/Ranking';
 
 function App() {
   return (
     <BrowserRouter>
       <div>
-        <div id="pages">
+        <div id='pages'>
           <Switch>
-            <Route exact path="/">
+            <Route exact path='/'>
               <Home />
             </Route>
-            <Route path="/Signup">
+            <Route path='/Signup'>
               <Signup />
             </Route>
-            <Route path="/EditProfile">
+            <Route path='/EditProfile'>
               <EditProfile />
+            </Route>
+            <Route path='/ranking'>
+              <Ranking />
             </Route>
           </Switch>
         </div>

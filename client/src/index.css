@@ -27,6 +27,7 @@ footer {
 }
 
 #nav-bar {
+  text-decoration: none;
   border: 1px solid #333;
   padding: 30px;
   background-color: brown;
@@ -40,15 +41,26 @@ footer {
 
 .ranking {
   flex: 1 1 auto;
+  color: inherit;
+  text-decoration: inherit;
 }
 .review {
   flex: 1 1 auto;
+  margin-left: 50px;
+  color: inherit;
+  text-decoration: inherit;
 }
 .forum {
   flex: 1 1 auto;
+  margin-left: 50px;
+  color: inherit;
+  text-decoration: inherit;
 }
 .rules {
   flex: 0 1 auto;
+  margin-left: 50px;
+  color: inherit;
+  text-decoration: inherit;
 }
 .content {
   border: 1px solid #333;
@@ -98,4 +110,77 @@ footer {
 }
 .editprofile-btn {
   background-color: brown;
+}
+.top3ranking_container {
+  text-align: left;
+  border: 3px solid #333;
+}
+
+.crawling_container {
+  overflow: scroll;
+  text-align: left;
+  border: 3px solid #333;
+  height: 49vh;
+}
+
+.top_ranking_container {
+  background-color: white;
+  border-radius: 0.5rem;
+  /* border: 3px solid #333; */
+  width: 500px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  font-size: larger;
+  font-weight: 600;
+  color: #66757f;
+  margin: 15px 6px 15px 6px;
+  padding: 10px 0 5px 0;
+}
+
+.ranking_label {
+  /* border: 3px solid #333; */
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0 2px 0 0;
+  padding: 5px 5px 5px 6px;
+  color: #90949c;
+}
+
+.ranking_alink {
+  /* border: 3px solid #333; */
+  margin: 10px 0 0 0;
+  text-decoration: none;
+  font-size: 16px;
+  color: #4c7ccf;
+}
+
+.crawling_alink {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #4c7ccf;
+  font-weight: 700;
+  height: 30px;
+}
+
+.deal_border {
+  border: 1px solid #333333;
+  margin: 0 0 0 0;
+  padding: 10px 14px 0 12px;
+  min-height: 60px;
+}
+
+.thumbnail {
+  border-radius: 1rem;
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+  object-fit: cover;
+}
+
+.text_link {
+  color: inherit;
+  text-decoration: inherit;
 }
