@@ -44,9 +44,9 @@ footer {
 #nav-bar {
   text-decoration: none;
   border: 1px solid #333;
-  padding: 15px;
-  background-color: brown;
-  color: #4c7ccf;
+  padding: 30px;
+  background-color: lightgoldenrodyellow;
+  color: brown;
   display: flex;
   font-size: 24px;
   font-weight: bold;
@@ -108,23 +108,25 @@ footer {
 }
 .signup {
   text-align: center;
-  background-color: gold;
+  background-color: burlywood;
   color: brown;
   margin-right: 300px;
   margin-left: 300px;
 }
 .signup-btn {
   background-color: brown;
+  height: 50px;
 }
 .editprofile {
   text-align: center;
-  background-color: gold;
+  background-color: burlywood;
   color: brown;
   margin-right: 300px;
   margin-left: 300px;
 }
 .editprofile-btn {
   background-color: brown;
+  height: 50px;
 }
 .top3ranking_container {
   text-align: left;

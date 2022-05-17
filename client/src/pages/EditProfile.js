@@ -27,14 +27,19 @@ function EditProfile() {
     if (!username || !password || !passwordCheck || !nickname || !email) {
       setErrMsg('모든 항목이 필수입니다.');
     } else {
-      axios
-        .post('https://localhost:3000/EditProfile', userInfo, {
-          headers: { 'Content-Type': 'application/json' },
-          withCredentials: true,
-        })
-        .then(() => {
-          history.push('/');
-        });
+      // axios
+      //   .post('https://localhost:3000/EditProfile', userInfo, {
+      //     headers: { 'Content-Type': 'application/json' },
+      //     withCredentials: true,
+      //   })
+      //   .then(() => {
+      //     history.push('/');
+      //   });
+      console.log('username: ', username);
+      console.log('password: ', password);
+      console.log('passwordCheck: ', passwordCheck);
+      console.log('nickname: ', nickname);
+      console.log('email: ', email);
     }
   };
   return (
@@ -43,9 +48,10 @@ function EditProfile() {
         <Header />
       </div>
       <form className="editprofile" onSubmit={(e) => e.preventDefault()}>
+        <h1>회원 정보 수정</h1>
         <div>
           <Link to="/" onClick={() => (window.location.href = '/')}>
-            다시 메인 페이지로
+            다시 메인 페이지로!
           </Link>
         </div>
         <div>모든 항목은 필수입니다.</div>
@@ -66,9 +72,9 @@ function EditProfile() {
           ></input>
         </div>
         <div>
-          <div>Password 확인을 위해 한번 더 입력해주세요.</div>
+          <div>Password 확인</div>
           <input
-            type="passwordCheck"
+            type="password"
             placeholder="Password"
             onChange={handleInputValue('passwordCheck')}
           ></input>
@@ -89,15 +95,14 @@ function EditProfile() {
             onChange={handleInputValue('email')}
           ></input>
         </div>
-
+        <div className="alert-box">{errMsg}</div>
         <button
           className="editprofile-btn"
           type="submit"
           onClick={handleEditProfile}
         >
-          회원정보 수정
+          회원 정보 수정
         </button>
-        <div className="alert-box">{errMsg}</div>
       </form>
       <div className="foot">
         <Footer />
