@@ -80,11 +80,7 @@ module.exports = {
         });
       },
   editUserProfile: (req, res) => {
-    const accessTokenData = isAuthorized(req);
-    // console.log("accessTokenData :", accessTokenData);
-    if (!accessTokenData) {
-      res.json({ data: null, message: "not authorized" });
-    }
+
   },
   getUserInfo: (req, res) => {
     const accessTokenData = isAuthorized(req);
