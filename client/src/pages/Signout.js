@@ -19,7 +19,7 @@ function Signout() {
   };
   const handleSignout = () => {
     const { username, password, passwordCheck, email } = userInfo;
-    console.log(userInfo);
+    console.log(username, password, email);
     if (!username || !password || !passwordCheck || !email) {
       setErrMsg('모든 항목이 필수입니다.');
     } else if (password !== passwordCheck) {
