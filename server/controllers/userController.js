@@ -1,7 +1,8 @@
 const {Users} = require('../models');
-const session = require('express-session');
+const {generateAccessToken,sendAccessToken,isAuthorized,sendRefreshToken} = require('./tokenFunctions/')
 
 module.exports = {
+
    //[post]/login
   //Users DB에서 사용자 정보 찾아서 accessToken을 쿠키(jwt)에 담아서 보내줌
   logIn: async(req, res) => {
@@ -22,10 +23,11 @@ module.exports = {
   //쿠키를 clear(AccessToken지움)한 후 로그아웃
   logOut: (req, res) => {
     if (!res.cookies) {
+      console.log(res.cookies)
       res.status(400).json({ message: "Bad request" });
     }
     res.clearCookie("jwt");
-    res.status(200).json({ message: "successfully signed out!" });
+    res.status(200).json({ message: "successfully logged out!" });
   },
     //[post]/signup
   //Users DB에서 사용자 정보 찾고 없으면 생성해서 accessToken을 쿠키(jwt)에 담아서 보내줌
@@ -40,7 +42,9 @@ module.exports = {
     const [result, created] = await Users.findOrCreate({
       where: { email },
       defaults: {
+        username,
         nickname,
+        email,
         password,
       },
     });
@@ -80,7 +84,6 @@ module.exports = {
         });
       },
   editUserProfile: (req, res) => {
-
   },
   getUserInfo: (req, res) => {
     const accessTokenData = isAuthorized(req);
