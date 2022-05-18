@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect, Link } from 'react-router-dom';
-// import user from '../data/User';
+import user from '../data/User';
 function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
   const [loginInfo, setLoginInfo] = useState({
     username: '',
@@ -28,6 +28,7 @@ function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
       //   });
 
       // dummy data를 이용한 로그인 구현
+   
       user.filter((el) => {
         if (el.username === username && el.password === password) {
           setUserInfo({ ...userInfo, nickname: el.nickname });
