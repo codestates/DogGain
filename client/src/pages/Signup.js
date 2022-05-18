@@ -19,29 +19,40 @@ function Signup() {
   };
   const handleSignup = () => {
     const { username, password, passwordCheck, nickname, email } = userInfo;
+    console.log(userInfo);
     if (!username || !password || !passwordCheck || !nickname || !email) {
       setErrMsg('모든 항목이 필수입니다.');
+    } else if (password !== passwordCheck) {
+      setErrMsg('비밀번호가 다릅니다.');
     } else {
-      // axios
-      //   .post('https://localhost:3000/signup', userInfo, {
-      //     headers: { 'Content-Type': 'application/json' },
-      //     withCredentials: true,
-      //   })
-      //   .then(() => {
-      //     history.push('/');
-      //   });
+      axios
+        .post(
+          'http://localhost:8080/user/signUp',
+          {
+            username: username,
+            password: password,
+            nickname: nickname,
+            email: email,
+          },
+          {
+            headers: { 'Content-Type': 'application/json' },
+            withCredentials: true,
+          }
+        )
+        .then(() => {
+          window.location.href = '/';
+        });
 
-      // 받아온 정보를 User.js에 추가 불가능
-      const allUser = [...user];
-      allUser.push({
-        id: allUser.length,
-        username: username,
-        nickname: nickname,
-        password: password,
-        email: email,
-      });
-      history.push('/');
-      console.log(allUser);
+      // const allUser = [...user];
+      // allUser.push({
+      //   id: allUser.length,
+      //   username: username,
+      //   nickname: nickname,
+      //   password: password,
+      //   email: email,
+      // });
+      // history.push('/');
+      // console.log(allUser);
       // console.log('username: ', username);
       // console.log('password: ', password);
       // console.log('passwordCheck: ', passwordCheck);

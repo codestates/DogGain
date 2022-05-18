@@ -46,7 +46,7 @@ function Sidebar() {
     email: '',
   });
   const history = useHistory();
-  const isAuth = () => {
+  const isAuth = (res) => {
     setIsLogin(true);
     console.log('isLogin ?? :: ', isLogin);
     console.log('성공적으로 로그인 성공 되셨습니다!');
@@ -55,13 +55,14 @@ function Sidebar() {
     isAuth();
   };
   const handleLogout = () => {
-    // axios.post('https://localhost:3000/logout').then(() => {
+    // axios.post('http://localhost:8080/user/logOut').then(() => {
     //   setUserInfo(null);
     //   setIsLogin(false);
     //   history.push('/');
     // });
-    setUserInfo(null);
+    // setUserInfo(null);
     setIsLogin(false);
+    history.push('/');
     console.log('성공적으로 로그아웃 되셨습니다!');
   };
   // useEffect(() => {
