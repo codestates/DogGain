@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Redirect, Link } from 'react-router-dom';
-import user from '../data/User';
+import { Link } from 'react-router-dom';
+
+
 function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
   const [loginInfo, setLoginInfo] = useState({
     username: '',
@@ -16,26 +17,25 @@ function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
     if (!username || !password) {
       setErrMsg('username과 password를 입력해주세요.');
     } else {
-      // axios
-      //   .post('https://localhost:3000/', loginInfo, {
-      //     headers: { 'Content-Type': 'application/json' },
-      //     withCredentials: true,
-      //   })
-      //   .then(() => {
-      //     handleLoginSuccess();
-      //     console.log('username: ', username);
-      //     console.log('password: ', password);
-      //   });
-
-      // dummy data를 이용한 로그인 구현
-   
-      user.filter((el) => {
-        if (el.username === username && el.password === password) {
-          setUserInfo({ ...userInfo, nickname: el.nickname });
+      axios
+        .post('http://localhost:8080/user/logIn', loginInfo, {
+          headers: { 'Content-Type': 'application/json' },
+          withCredentials: true,
+        })
+        .then(() => {
           handleLoginSuccess();
           console.log('username: ', username);
           console.log('password: ', password);
-          console.log('nickname: ', el.nickname);
+        });
+
+      // dummy data를 이용한 로그인 구현
+
+      user.filter((el) => {
+        if (el.username === username && el.password === password) {
+          setUserInfo({ ...userInfo, username: el.username });
+          handleLoginSuccess();
+          console.log('username: ', username);
+          console.log('password: ', password);
         } else {
           setErrMsg('로그인 정보가 일치하지 않습니다.');
           console.log('로그인 정보가 일치하지 않습니다.');

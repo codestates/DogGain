@@ -8,7 +8,7 @@ function Signup() {
   const [userInfo, setUserInfo] = useState({
     username: '',
     password: '',
-    passwordCheck: '',
+    passwordCheck : '',
     nickname: '',
     email: '',
   });
@@ -22,14 +22,14 @@ function Signup() {
     if (!username || !password || !passwordCheck || !nickname || !email) {
       setErrMsg('모든 항목이 필수입니다.');
     } else {
-      // axios
-      //   .post('https://localhost:3000/signup', userInfo, {
-      //     headers: { 'Content-Type': 'application/json' },
-      //     withCredentials: true,
-      //   })
-      //   .then(() => {
-      //     history.push('/');
-      //   });
+      axios
+        .post('http://localhost:8080/user/signUp', userInfo, {
+          headers: { 'Content-Type': 'application/json' },
+          withCredentials: true,
+        })
+        .then(() => {
+          history.push('/');
+        });
 
       // 받아온 정보를 User.js에 추가 불가능
       const allUser = [...user];

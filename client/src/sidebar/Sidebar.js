@@ -55,13 +55,14 @@ function Sidebar() {
     isAuth();
   };
   const handleLogout = () => {
-    // axios.post('https://localhost:3000/logout').then(() => {
+    // axios.post('http://localhost:8080/user/logOut').then(() => {
     //   setUserInfo(null);
     //   setIsLogin(false);
     //   history.push('/');
     // });
-    setUserInfo(null);
+    // setUserInfo(null);
     setIsLogin(false);
+    history.push('/')
     console.log('성공적으로 로그아웃 되셨습니다!');
   };
   // useEffect(() => {
