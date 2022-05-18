@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Mypage({ userInfo, handleLogout }) {
+function Mypage({ user, userInfo, handleLogout }) {
   const { nickname } = userInfo;
   return (
     <div>
       <div>오늘도 개이득보러 오셨군요!?</div>
-      <div>{nickname}</div>
+      <div>{'Welcome! ' + nickname}</div>
       <div>
         <Link
           to="/EditProfile"

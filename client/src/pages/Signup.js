@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link, useHistory } from 'react-router-dom';
+import { Redirect, Link, useHistory } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
+import user from '../data/User';
 function Signup() {
   const [userInfo, setUserInfo] = useState({
     username: '',
@@ -21,14 +22,31 @@ function Signup() {
     if (!username || !password || !passwordCheck || !nickname || !email) {
       setErrMsg('모든 항목이 필수입니다.');
     } else {
-      axios
-        .post('https://localhost:3000/signup', userInfo, {
-          headers: { 'Content-Type': 'application/json' },
-          withCredentials: true,
-        })
-        .then(() => {
-          history.push('/');
-        });
+      // axios
+      //   .post('https://localhost:3000/signup', userInfo, {
+      //     headers: { 'Content-Type': 'application/json' },
+      //     withCredentials: true,
+      //   })
+      //   .then(() => {
+      //     history.push('/');
+      //   });
+
+      // 받아온 정보를 User.js에 추가 불가능
+      const allUser = [...user];
+      allUser.push({
+        id: allUser.length,
+        username: username,
+        nickname: nickname,
+        password: password,
+        email: email,
+      });
+      history.push('/');
+      console.log(allUser);
+      // console.log('username: ', username);
+      // console.log('password: ', password);
+      // console.log('passwordCheck: ', passwordCheck);
+      // console.log('nickname: ', nickname);
+      // console.log('email: ', email);
     }
   };
   return (
@@ -37,9 +55,10 @@ function Signup() {
         <Header />
       </div>
       <form className="signup" onSubmit={(e) => e.preventDefault()}>
-        <div>
+        <h1>회원가입</h1>
+        <div className="return-home">
           <Link to="/" onClick={() => (window.location.href = '/')}>
-            다시 메인 페이지로
+            다시 메인페이지로!
           </Link>
         </div>
         <div>모든 항목은 필수입니다.</div>
@@ -60,9 +79,9 @@ function Signup() {
           ></input>
         </div>
         <div>
-          <div>Password 확인을 위해 한번 더 입력해주세요.</div>
+          <div>Password 확인</div>
           <input
-            type="passwordCheck"
+            type="password"
             placeholder="Password"
             onChange={handleInputValue('passwordCheck')}
           ></input>
@@ -83,11 +102,19 @@ function Signup() {
             onChange={handleInputValue('email')}
           ></input>
         </div>
-
+        <div className="alert-box">{errMsg}</div>
+        {/* <Link
+          to="/"
+          className="signup-btn"
+          type="submit"
+          onClick={handleSignup}
+          onClick={() => (window.location.href = '/')}
+        >
+          회원가입
+        </Link> */}
         <button className="signup-btn" type="submit" onClick={handleSignup}>
           회원가입
         </button>
-        <div className="alert-box">{errMsg}</div>
       </form>
       <div className="foot">
         <Footer />
