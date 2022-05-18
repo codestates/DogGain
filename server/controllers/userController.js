@@ -83,7 +83,7 @@ module.exports = {
     const { username, password, nickname, email } = req.body;
     if (!username || !nickname || !email || !password) {
       return res.status(422).send('모든 항목을 입력해 주세요');
-    }
+    } 
     await Users.update(
       {
         username: req.body.username,
