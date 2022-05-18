@@ -1,6 +1,8 @@
 'use strict';
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
+
+
   class Deals extends Model {
     /**
      * Helper method for defining associations.
@@ -9,7 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.Deals.hasMany(models.Comments);
+       models.Deals.hasMany(models.Comments,
+        {
+          foreignKey: 'deal_id', onDelete: 'cascade',
+          sourceKey: "id"
+        });
     }
   }
   Deals.init(
