@@ -22,7 +22,7 @@ getHTML(boardUrl)
     const endNum = $endNum.replace(/ /g, '');
     return endNum
   }).then(result => {
-
+ 
     //! axios 요청으로 startNum 받아올 수 있게 수정 필요
     let startNum = 420860;
     let endNum = result;
