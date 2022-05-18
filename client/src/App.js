@@ -9,21 +9,21 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <div id="pages">
+        <div id='content'>
           <Switch>
-            <Route exact path="/">
+            <Route exact path='/'>
               <Home />
             </Route>
-            <Route path="/Signup">
+            <Route path='/Signup'>
               <Signup />
             </Route>
-            <Route path="/Signout">
+            <Route path='/Signout'>
               <Signout />
             </Route>
-            <Route path="/EditProfile">
+            <Route path='/EditProfile'>
               <EditProfile />
             </Route>
-            <Route path="/ranking">
+            <Route path='/ranking'>
               <Ranking />
             </Route>
           </Switch>

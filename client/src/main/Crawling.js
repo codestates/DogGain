@@ -11,7 +11,7 @@ function Crawling({ deals }) {
         {deals.map((deal, idx) => {
           //   console.log(deal.origin_img_url);
           return (
-            <div className='deal_container'>
+            <div className='deal_container' key={deal.id}>
               <div style={{ flex: 1 }}>
                 <img
                   className='thumbnail'

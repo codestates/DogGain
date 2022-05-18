@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  max-width: 2000px;
 }
 
 body {
@@ -8,9 +9,34 @@ body {
 }
 
 header {
-  text-align: center;
-  color: black;
+  font-family: 'Arial, Helvetica, sans-serif';
+  font-size: 50px;
+  font-weight: 500;
+  text-align: left;
+  color: #4c7ccf;
+  margin: 15px 0 15px 0;
 }
+
+.signup_link {
+  display: inline;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit;
+  color: gray;
+}
+
+.signout_link {
+  display: block;
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit;
+  color: gray;
+  text-align: right;
+  margin-right: 100px;
+}
+
 .logo {
   max-width: 13%;
   max-height: 13%;
@@ -41,46 +67,71 @@ footer {
   font-size: 13px;
 }
 
+.home-foot {
+  margin-right: 300px;
+}
+
 #nav-bar {
   text-decoration: none;
-  border: 1px solid #333;
+  border: 10px solid #e9ebee;
   padding: 30px;
-  background-color: lightgoldenrodyellow;
-  color: brown;
+  background-color: #ffffff;
+  color: #4c7ccf;
   display: flex;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-left: 300px;
   margin-right: 300px;
 }
 
+#nav-bar > div:nth-child(1):hover {
+  transition: 0.3s;
+  background-color: thistle;
+}
+
+#nav-bar > div:nth-child(2):hover {
+  transition: 0.3s;
+  background-color: thistle;
+}
+
+#nav-bar > div:nth-child(3):hover {
+  transition: 0.3s;
+  background-color: thistle;
+}
+
+#nav-bar > div:nth-child(4):hover {
+  height: 100%;
+  transition: 0.3s;
+  background-color: thistle;
+}
+
 .ranking {
+  text-decoration: none;
   flex: 1 1 auto;
   color: inherit;
-  text-decoration: inherit;
 }
 .review {
+  text-decoration: none;
   flex: 1 1 auto;
   margin-left: 50px;
   color: inherit;
-  text-decoration: inherit;
 }
 .forum {
+  text-decoration: none;
   flex: 1 1 auto;
   margin-left: 50px;
   color: inherit;
-  text-decoration: inherit;
 }
 .rules {
+  text-decoration: none;
   flex: 0 1 auto;
   margin-left: 50px;
   color: inherit;
-  text-decoration: inherit;
 }
 .content {
-  border: 1px solid #333;
+  border: 1px solid #e9ebee;
   display: flex;
-  background-color: burlywood;
+  background-color: #ffffff;
   height: 100%;
   margin-left: 300px;
   margin-right: 300px;
@@ -88,15 +139,17 @@ footer {
 .sidebar {
   flex: 1 1 auto;
   text-align: center;
-  border: 10px solid #e9ebee;
+  background: #e9ebee;
 }
 .login {
-  height: 30vh;
-  border: 1px solid #333;
+  background: #ffffff;
+  border-right: 5px solid #e9ebee;
+  border-left: 15px solid #e9ebee;
+  border-top: 10px solid #e9ebee;
+  height: 24.6vh;
 }
 .filter {
   height: 30vh;
-  border: 1px solid #333;
 }
 .main {
   flex: 5 1 auto;
@@ -104,30 +157,20 @@ footer {
   border: 1px solid #e9ebee;
 }
 .foot {
-  margin-right: 800px;
-}
-.home-foot {
   margin-right: 300px;
+}
+
+.login_style {
+  margin-top: 2rem;
 }
 .signup {
   text-align: center;
   background-color: burlywood;
   color: brown;
-  margin-right: 800px;
-  margin-left: 800px;
+  margin-right: 300px;
+  margin-left: 300px;
 }
 .signup-btn {
-  background-color: brown;
-  height: 50px;
-}
-.signout {
-  text-align: center;
-  background-color: burlywood;
-  color: brown;
-  margin-right: 800px;
-  margin-left: 800px;
-}
-.signout-btn {
   background-color: brown;
   height: 50px;
 }
@@ -135,8 +178,8 @@ footer {
   text-align: center;
   background-color: burlywood;
   color: brown;
-  margin-right: 800px;
-  margin-left: 800px;
+  margin-right: 300px;
+  margin-left: 300px;
 }
 .editprofile-btn {
   background-color: brown;
@@ -158,7 +201,7 @@ footer {
 }
 
 .top_ranking_container {
-  /* background-color: gold; */
+  background-color: #ffffff;
   border-radius: 0.5rem;
   /* border: 3px solid #333; */
   width: 500px;

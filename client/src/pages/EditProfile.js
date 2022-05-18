@@ -49,10 +49,10 @@ function EditProfile() {
       <div>
         <Header />
       </div>
-      <form className="editprofile" onSubmit={(e) => e.preventDefault()}>
+      <form className='editprofile' onSubmit={(e) => e.preventDefault()}>
         <h1>회원 정보 수정</h1>
         <div>
-          <Link to="/" onClick={() => (window.location.href = '/')}>
+          <Link to='/' onClick={() => (window.location.href = '/')}>
             다시 메인 페이지로!
           </Link>
         </div>
@@ -60,53 +60,62 @@ function EditProfile() {
         <div>
           <div>Username</div>
           <input
-            type="text"
-            placeholder="Username"
+            type='text'
+            placeholder='Username'
             onChange={handleInputValue('username')}
           ></input>
         </div>
         <div>
           <div>Password</div>
           <input
-            type="password"
-            placeholder="Password"
+            type='password'
+            placeholder='Password'
             onChange={handleInputValue('password')}
           ></input>
         </div>
         <div>
           <div>Password 확인</div>
           <input
-            type="password"
-            placeholder="Password"
+            type='password'
+            placeholder='Password'
             onChange={handleInputValue('passwordCheck')}
           ></input>
         </div>
         <div>
           <div>Nickname</div>
           <input
-            type="text"
-            placeholder="Nickname"
+            type='text'
+            placeholder='Nickname'
             onChange={handleInputValue('nickname')}
           ></input>
         </div>
         <div>
           <div>E-mail</div>
           <input
-            type="email"
-            placeholder="E-mail"
+            type='email'
+            placeholder='E-mail'
             onChange={handleInputValue('email')}
           ></input>
+          <div>
+            <Link
+              className='signout_link'
+              to='/Signout'
+              onClick={() => (window.location.href = '/Signout')}
+            >
+              회원탈퇴
+            </Link>
+          </div>
         </div>
-        <div className="alert-box">{errMsg}</div>
+        <div className='alert-box'>{errMsg}</div>
         <button
-          className="editprofile-btn"
-          type="submit"
+          className='editprofile-btn'
+          type='submit'
           onClick={handleEditProfile}
         >
           회원 정보 수정
         </button>
       </form>
-      <div className="foot">
+      <div className='foot'>
         <Footer />
       </div>
     </div>

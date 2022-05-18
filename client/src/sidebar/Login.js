@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-
 function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
   const [loginInfo, setLoginInfo] = useState({
     username: '',
@@ -44,38 +43,37 @@ function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
     }
   };
   return (
-    <div>
-      <div>개이득 서비스를 위한 로그인!</div>
+    <div className='login_style'>
+      <div>DogGain 로그인</div>
       <div>
         <input
-          placeholder="username"
-          type="string"
+          placeholder='username'
+          type='string'
           onChange={handleInputValue('username')}
         />
       </div>
       <div>
         <input
-          placeholder="password"
-          type="password"
+          placeholder='password'
+          type='password'
           onChange={handleInputValue('password')}
         />
       </div>
       <div>
-        <button classname="login-btn" onClick={handleLogin}>
+        <button className='login-btn' onClick={handleLogin}>
           로그인
         </button>
       </div>
-      <div>
-        <Link to="/Signup" onClick={() => (window.location.href = '/Signup')}>
-          아직 아이디가 없으신가요?
-        </Link>
-      </div>
-      <div>
-        <Link to="/Signout" onClick={() => (window.location.href = '/Signout')}>
-          더이상 회원이고 싶지 않으신가요?
-        </Link>
-      </div>
-      <div className="alert-box">{errMsg}</div>
+
+      <Link
+        className='signup_link'
+        to='/Signup'
+        onClick={() => (window.location.href = '/Signup')}
+      >
+        Signup
+      </Link>
+
+      <div className='alert-box'>{errMsg}</div>
     </div>
   );
 }

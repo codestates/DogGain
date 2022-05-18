@@ -18,10 +18,8 @@ function Top3ranking({ deals }) {
           .filter((deal) => (deal.id <= 2 ? deal : undefined))
           .map((deal) => {
             return (
-              <div>
-                <span className='ranking_label' key={deal.id}>
-                  {deal.id + 1}위
-                </span>
+              <div key={deal.id}>
+                <span className='ranking_label'>{deal.id + 1}위</span>
                 <a href={deal.origin_url} className='ranking_alink'>
                   {deal.origin_title}
                 </a>

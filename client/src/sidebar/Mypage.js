@@ -9,14 +9,14 @@ function Mypage({ user, userInfo, handleLogout }) {
       <div>{'Welcome! ' + nickname}</div>
       <div>
         <Link
-          to="/EditProfile"
+          to='/EditProfile'
           onClick={() => (window.location.href = '/EditProfile')}
         >
           회원정보 수정
         </Link>
       </div>
       <div>
-        <button classname="logout-btn" onClick={handleLogout}>
+        <button classname='logout-btn' onClick={handleLogout}>
           로그아웃
         </button>
       </div>
