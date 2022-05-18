@@ -1,6 +1,3 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
-const { Deals } = require('../../models');
 const {
   getHTML,
   getEndNum,

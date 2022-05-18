@@ -4,6 +4,7 @@ const app = express();
 const { sequelize } = require("./models");
 const userRouter = require("./router/user")
 const dealRouter = require('./router/deal')
+const getDeal = require('./controllers/deals')
 
 
 app.use(express.json());
@@ -11,6 +12,10 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use('/user', userRouter)
 app.use('/deal', dealRouter)
+
+setInterval(() => {
+  getDeal.post();
+}, 600000);
 
 sequelize
   .sync({ force: false })
