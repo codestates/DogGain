@@ -4,6 +4,7 @@ const app = express();
 const { sequelize } = require('./models');
 const userRouter = require('./router/user');
 const dealRouter = require('./router/deal');
+const getDeal = require('./controllers/deals')
 
 app.use(express.json());
 app.use(
