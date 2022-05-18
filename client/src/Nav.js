@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 
 function Nav() {
   return (
-    <div>
+    <div className='realfinal'>
       <div id='nav-bar'>
-        <Link to='/ranking' className='ranking'>
+        <Link
+          onClick={() => (window.location.href = '/ranking')}
+          to='/ranking'
+          className='ranking'
+        >
           <div className='ranking'>랭킹</div>
         </Link>
         <Link to='/review' className='review'>
@@ -14,7 +18,11 @@ function Nav() {
         <Link to='/forum' className='forum'>
           <div className='forum'>포럼</div>
         </Link>
-        <Link to='/rule' className='rules'>
+        <Link
+          onClick={() => (window.location.href = '/rule')}
+          to='/rule'
+          className='rules'
+        >
           <div className='rules'>이용규칙</div>
         </Link>
       </div>

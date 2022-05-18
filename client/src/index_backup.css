@@ -76,6 +76,7 @@ footer {
 }
 
 #nav-bar {
+  text-align: center;
   text-decoration: none;
   border: 10px solid #e9ebee;
   padding: 30px;
@@ -84,8 +85,7 @@ footer {
   display: flex;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-left: 300px;
-  margin-right: 300px;
+  width: 50%;
 }
 
 .realfinal {
@@ -114,15 +114,6 @@ footer {
   background-color: thistle;
 }
 
-.error_container {
-  overflow: auto;
-  padding-top: 10px;
-  text-align: center;
-  border: 10px solid #e9ebee;
-  /* border: 3px solid #333; */
-  height: 49.3vh;
-}
-
 .ranking {
   text-decoration: none;
   flex: 1 1 auto;
@@ -142,7 +133,7 @@ footer {
 }
 .rules {
   text-decoration: none;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   margin-left: 50px;
   color: inherit;
 }
@@ -225,15 +216,6 @@ footer {
   height: 49.3vh;
 }
 
-.rule_container {
-  overflow: auto;
-  padding-top: 10px;
-  text-align: center;
-  border: 10px solid #e9ebee;
-  /* border: 3px solid #333; */
-  height: 49.3vh;
-}
-
 .top_ranking_container {
   background-color: #ffffff;
   border-radius: 0.5rem;
@@ -279,11 +261,6 @@ footer {
   text-decoration: none;
   font-size: 1.1rem;
   color: #4c7ccf;
-}
-
-.rule_list {
-  margin-top: 60px;
-  font-size: 0.95rem;
 }
 
 .title_alink {

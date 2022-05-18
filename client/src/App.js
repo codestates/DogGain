@@ -4,6 +4,7 @@ import Signup from './pages/Signup';
 import Signout from './pages/Signout';
 import EditProfile from './pages/EditProfile';
 import Ranking from './pages/Ranking';
+import Rule from './pages/Rule';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route path='/ranking'>
               <Ranking />
+            </Route>
+            <Route path='/rule'>
+              <Rule />
             </Route>
           </Switch>
         </div>
