@@ -81,7 +81,7 @@ function Sidebar() {
           />
         )}
       </div>
-      <div className="filter">Filter 컴포넌트</div>
+      {/* <div className="filter">Filter 컴포넌트</div> */}
     </div>
   );
 }
