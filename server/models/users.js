@@ -9,7 +9,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.Users.hasMany(models.Comments);
+      models.Users.hasMany(models.Comments,
+        {
+          foreignKey: 'user_id', onDelete: 'cascade',
+          sourceKey: "id"
+        });
     }
   }
   Users.init(
