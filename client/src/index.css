@@ -80,7 +80,7 @@ footer {
 .content {
   border: 1px solid #333;
   display: flex;
-  background-color: gold;
+  background-color: burlywood;
   height: 100%;
   margin-left: 300px;
   margin-right: 300px;
@@ -104,16 +104,30 @@ footer {
   border: 1px solid #e9ebee;
 }
 .foot {
+  margin-right: 800px;
+}
+.home-foot {
   margin-right: 300px;
 }
 .signup {
   text-align: center;
   background-color: burlywood;
   color: brown;
-  margin-right: 300px;
-  margin-left: 300px;
+  margin-right: 800px;
+  margin-left: 800px;
 }
 .signup-btn {
+  background-color: brown;
+  height: 50px;
+}
+.signout {
+  text-align: center;
+  background-color: burlywood;
+  color: brown;
+  margin-right: 800px;
+  margin-left: 800px;
+}
+.signout-btn {
   background-color: brown;
   height: 50px;
 }
@@ -121,8 +135,8 @@ footer {
   text-align: center;
   background-color: burlywood;
   color: brown;
-  margin-right: 300px;
-  margin-left: 300px;
+  margin-right: 800px;
+  margin-left: 800px;
 }
 .editprofile-btn {
   background-color: brown;
@@ -144,7 +158,7 @@ footer {
 }
 
 .top_ranking_container {
-  background-color: gold;
+  /* background-color: gold; */
   border-radius: 0.5rem;
   /* border: 3px solid #333; */
   width: 500px;

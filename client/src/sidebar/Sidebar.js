@@ -46,7 +46,7 @@ function Sidebar() {
     email: '',
   });
   const history = useHistory();
-  const isAuth = () => {
+  const isAuth = (res) => {
     setIsLogin(true);
     console.log('isLogin ?? :: ', isLogin);
     console.log('성공적으로 로그인 성공 되셨습니다!');
@@ -62,7 +62,7 @@ function Sidebar() {
     // });
     // setUserInfo(null);
     setIsLogin(false);
-    history.push('/')
+    history.push('/');
     console.log('성공적으로 로그아웃 되셨습니다!');
   };
   // useEffect(() => {
@@ -82,7 +82,7 @@ function Sidebar() {
           />
         )}
       </div>
-      <div className="filter">Filter 컴포넌트</div>
+      {/* <div className="filter">Filter 컴포넌트</div> */}
     </div>
   );
 }

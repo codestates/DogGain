@@ -22,25 +22,25 @@ function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
           headers: { 'Content-Type': 'application/json' },
           withCredentials: true,
         })
-        .then(() => {
-          handleLoginSuccess();
+        .then((res) => {
+          console.log(res);
+          handleLoginSuccess(res);
           console.log('username: ', username);
           console.log('password: ', password);
         });
-
       // dummy data를 이용한 로그인 구현
-
-      user.filter((el) => {
-        if (el.username === username && el.password === password) {
-          setUserInfo({ ...userInfo, username: el.username });
-          handleLoginSuccess();
-          console.log('username: ', username);
-          console.log('password: ', password);
-        } else {
-          setErrMsg('로그인 정보가 일치하지 않습니다.');
-          console.log('로그인 정보가 일치하지 않습니다.');
-        }
-      });
+      // user.filter((el) => {
+      //   if (el.username === username && el.password === password) {
+      //     setUserInfo({ ...userInfo, nickname: el.nickname });
+      //     handleLoginSuccess();
+      //     console.log('username: ', username);
+      //     console.log('password: ', password);
+      //     console.log('nickname: ', el.nickname);
+      //   } else {
+      //     setErrMsg('로그인 정보가 일치하지 않습니다.');
+      //     console.log('로그인 정보가 일치하지 않습니다.');
+      //   }
+      // });
     }
   };
   return (
@@ -68,6 +68,11 @@ function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
       <div>
         <Link to="/Signup" onClick={() => (window.location.href = '/Signup')}>
           아직 아이디가 없으신가요?
+        </Link>
+      </div>
+      <div>
+        <Link to="/Signout" onClick={() => (window.location.href = '/Signout')}>
+          더이상 회원이고 싶지 않으신가요?
         </Link>
       </div>
       <div className="alert-box">{errMsg}</div>
