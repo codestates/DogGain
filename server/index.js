@@ -8,7 +8,11 @@ const getDeal = require('./controllers/deals')
 
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000', 'http://localhost:8080'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PATCH']
+}));
 app.use(express.urlencoded({ extended: false }));
 app.use('/user', userRouter)
 app.use('/deal', dealRouter)
@@ -37,4 +41,4 @@ app.use((err, req, res, next) => {
   res.status(500).send("Internal Server Error");
 });
 
-app.listen(80, () => console.log("server is running"));
+app.listen(8080, () => console.log("server is running"));

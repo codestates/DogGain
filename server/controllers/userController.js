@@ -1,5 +1,5 @@
 const {Users} = require('../models');
-const {generateAccessToken,sendAccessToken,isAuthorized,sendRefreshToken} = require('./tokenFunctions/')
+const {generateAccessToken,sendAccessToken,isAuthorized} = require('./tokenFunctions/')
 
 module.exports = {
 
@@ -33,19 +33,19 @@ module.exports = {
   //Users DB에서 사용자 정보 찾고 없으면 생성해서 accessToken을 쿠키(jwt)에 담아서 보내줌
   signUp: async (req, res) => {
     console.log(req);
-    const { username, nickname, email, password } = req.body;
+    const { username,password,nickname,email} = req.body;
 
     if (!username || !nickname || !email || !password) {
       return res.status(422).send("모든 항목을 입력해 주세요");
     }
 
     const [result, created] = await Users.findOrCreate({
-      where: { email },
+      where: {username},
       defaults: {
         username,
+        password,
         nickname,
         email,
-        password,
       },
     });
 
