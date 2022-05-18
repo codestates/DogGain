@@ -83,7 +83,7 @@ module.exports = {
       
       const createdStartNum = $views.indexOf('등록일');
       const createdEndNum = $views.indexOf('조회수') - 1;
-      
+       
       const views = Number($views.slice(viewStartNum, viewEndNum));
       const likes = Number($views.slice(likeStartNum, likeEndNum));
       const created = $views.slice(createdStartNum, createdEndNum);
