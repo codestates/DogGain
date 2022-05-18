@@ -21,7 +21,7 @@ function App() {
           <Main />
         </div>
       </div>
-      <div className="foot">
+      <div className="home-foot">
         <Footer />
       </div>
     </div>

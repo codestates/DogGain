@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  Link,
-  useHistory,
-} from 'react-router-dom';
+import { Redirect, Link, useHistory } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
-function EditProfile() {
+import user from '../data/User';
+function Signout() {
   const [userInfo, setUserInfo] = useState({
     username: '',
     password: '',
@@ -22,26 +17,30 @@ function EditProfile() {
   const handleInputValue = (key) => (e) => {
     setUserInfo({ ...userInfo, [key]: e.target.value });
   };
-  const handleEditProfile = () => {
-    const { username, password, passwordCheck, nickname, email } = userInfo;
-    if (!username || !password || !passwordCheck || !nickname || !email) {
+  const handleSignout = () => {
+    const { username, password, passwordCheck, email } = userInfo;
+    console.log(userInfo);
+    if (!username || !password || !passwordCheck || !email) {
       setErrMsg('모든 항목이 필수입니다.');
     } else if (password !== passwordCheck) {
       setErrMsg('비밀번호가 다릅니다.');
     } else {
       axios
-        .post('http://localhost:8080/user/profile', userInfo, {
-          headers: { 'Content-Type': 'application/json' },
-          withCredentials: true,
-        })
+        .delete(
+          'http://localhost:8080/user/signout',
+          {
+            username: username,
+            password: password,
+            email: email,
+          },
+          {
+            headers: { 'Content-Type': 'application/json' },
+            withCredentials: true,
+          }
+        )
         .then(() => {
-          history.push('/');
+          window.location.href = '/';
         });
-      console.log('username: ', username);
-      console.log('password: ', password);
-      console.log('passwordCheck: ', passwordCheck);
-      console.log('nickname: ', nickname);
-      console.log('email: ', email);
     }
   };
   return (
@@ -49,11 +48,11 @@ function EditProfile() {
       <div>
         <Header />
       </div>
-      <form className="editprofile" onSubmit={(e) => e.preventDefault()}>
-        <h1>회원 정보 수정</h1>
-        <div>
+      <form className="signout" onSubmit={(e) => e.preventDefault()}>
+        <h1>회원탈퇴</h1>
+        <div className="return-home">
           <Link to="/" onClick={() => (window.location.href = '/')}>
-            다시 메인 페이지로!
+            다시 메인페이지로!
           </Link>
         </div>
         <div>모든 항목은 필수입니다.</div>
@@ -82,14 +81,6 @@ function EditProfile() {
           ></input>
         </div>
         <div>
-          <div>Nickname</div>
-          <input
-            type="text"
-            placeholder="Nickname"
-            onChange={handleInputValue('nickname')}
-          ></input>
-        </div>
-        <div>
           <div>E-mail</div>
           <input
             type="email"
@@ -98,12 +89,8 @@ function EditProfile() {
           ></input>
         </div>
         <div className="alert-box">{errMsg}</div>
-        <button
-          className="editprofile-btn"
-          type="submit"
-          onClick={handleEditProfile}
-        >
-          회원 정보 수정
+        <button className="signout-btn" type="submit" onClick={handleSignout}>
+          회원탈퇴
         </button>
       </form>
       <div className="foot">
@@ -112,4 +99,4 @@ function EditProfile() {
     </div>
   );
 }
-export default EditProfile;
+export default Signout;

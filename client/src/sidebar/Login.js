@@ -69,6 +69,11 @@ function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
           아직 아이디가 없으신가요?
         </Link>
       </div>
+      <div>
+        <Link to="/Signout" onClick={() => (window.location.href = '/Signout')}>
+          더이상 회원이고 싶지 않으신가요?
+        </Link>
+      </div>
       <div className="alert-box">{errMsg}</div>
     </div>
   );

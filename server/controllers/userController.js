@@ -64,32 +64,40 @@ module.exports = {
     }
   },
   signOut: (req, res) => {
-    console.log('session userid:', req.session.userid);
+    const { username, password, email } = req.body;
+    if (!username || !email || !password) {
+      return res.status(422).send('모든 항목을 입력해 주세요');
+    }
     Users.destroy({
       where: {
-        id: req.session.userid,
+        username: req.body.username,
+        password: req.body.password,
+        email: req.body.email,
       },
-    })
-      .then(() => {
-        //session 정보도 지워줘야함.
-        req.session.destroy((err) => {
-          if (err) {
-            res.status(400).send('you are currently not logined');
-          } else {
-            res.status(200).send('안전하게 탈퇴처리되었습니다.');
-          }
-        });
-      })
-      .catch((err) => {
-        res.status(500).send('err');
-      });
+    }).then(function (row) {
+      console.log(row);
+    });
+    res.status(200).json({ message: 'successfully signed out!' });
   },
-  editUserProfile: (req, res) => {
-    const accessTokenData = isAuthorized(req);
-    // console.log("accessTokenData :", accessTokenData);
-    if (!accessTokenData) {
-      res.json({ data: null, message: 'not authorized' });
+  editUserProfile: async (req, res) => {
+    const { username, password, nickname, email } = req.body;
+    if (!username || !nickname || !email || !password) {
+      return res.status(422).send('모든 항목을 입력해 주세요');
     }
+    await Users.update(
+      {
+        username: req.body.username,
+        nickname: req.body.nickname,
+        password: req.body.password,
+        email: req.body.email,
+      },
+      {
+        where: {
+          id: { [Op.gt]: 0 },
+        },
+      }
+    );
+    res.status(204).json({ message: 'successfully updated' });
   },
   getUserInfo: (req, res) => {
     const accessTokenData = isAuthorized(req);
