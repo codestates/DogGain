@@ -4,7 +4,7 @@ import Main from '../main/Main';
 import Header from '../Header';
 import Footer from '../Footer';
 
-function App() {
+function Home() {
   return (
     <div>
       <div className="head">
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
