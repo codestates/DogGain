@@ -21,7 +21,10 @@ function Signup() {
     const { username, password, passwordCheck, nickname, email } = userInfo;
     if (!username || !password || !passwordCheck || !nickname || !email) {
       setErrMsg('모든 항목이 필수입니다.');
-    } else {
+    } else if(password !== passwordCheck) {
+      setErrMsg('비밀번호가 다릅니다.');
+    }
+    else {
       axios
         .post('http://localhost:8080/user/signUp', userInfo, {
           headers: { 'Content-Type': 'application/json' },
