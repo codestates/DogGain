@@ -24,16 +24,15 @@ module.exports = {
   
   getDeal : async (postUrl, sitename, pointer) => {
     const dbNum = await Pointers.findOne({ where: { sitename: sitename } });
-
-    let startNum = await dbNum.pointer
+    
     let endNum = pointer;
 
-    
-    if (startNum === null) {
-      startNum = endNum - 20
-      await Pointers.create({ sitename: sitename, pointer: startNum });
+    if (dbNum === null) {
+      await Pointers.create({ sitename: sitename, pointer: startNum - 20 });
     }
     
+    let startNum = await dbNum.pointer
+
     if (Number(startNum) === Number(endNum)) {
       console.log("pointer : " + pointer + "\n크롤링할 데이터가 없습니다.")
       return;
