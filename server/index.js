@@ -17,6 +17,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/user', userRouter);
 app.use('/deal', dealRouter);
 
+setInterval(() => {
+  getDeal.post();
+}, 600000);
+
 sequelize
   .sync({ force: false })
   .then((e) => {

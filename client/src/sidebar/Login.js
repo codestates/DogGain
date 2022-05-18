@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Redirect, Link } from 'react-router-dom';
-import user from '../data/User';
+import { Link } from 'react-router-dom';
+
+
 function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
   const [loginInfo, setLoginInfo] = useState({
     username: '',

@@ -8,7 +8,7 @@ function Signup() {
   const [userInfo, setUserInfo] = useState({
     username: '',
     password: '',
-    passwordCheck: '',
+    passwordCheck : '',
     nickname: '',
     email: '',
   });
