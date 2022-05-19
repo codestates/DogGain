@@ -6,6 +6,8 @@
 
 실시간 핫딜을 찾아 헤매는 여러분을 위한 사이트, DogGain
 
+[DogGain](http://bucket-doggain.s3-website.ap-northeast-2.amazonaws.com)
+
 ## Feature
 
 - 실시간으로 추가되는 최신 핫딜을 볼 수 있습니다.
