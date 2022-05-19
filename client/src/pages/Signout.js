@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Redirect, Link, useHistory } from 'react-router-dom';
-import Header from '../Header';
+import { Link, useHistory } from 'react-router-dom';
 import Footer from '../Footer';
-import user from '../data/User';
 import SidebarHeader from '../SidebarHeader';
+
+let serverURL = 'http://ec2-52-78-195-243.ap-northeast-2.compute.amazonaws.com';
+
 function Signout() {
   const [userInfo, setUserInfo] = useState({
     username: '',
@@ -28,7 +29,7 @@ function Signout() {
     } else {
       axios
         .delete(
-          'http://localhost:8080/user/signout',
+          `${serverURL}/user/signout`,
           {
             username: username,
             password: password,

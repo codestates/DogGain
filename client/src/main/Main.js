@@ -1,24 +1,23 @@
 import Top3ranking from './Top3ranking';
 import Crawling from './Crawling';
-import deals from '../data/Deals';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Pagenation from '../Components/Pagenation';
 
+let serverURL = 'http://ec2-52-78-195-243.ap-northeast-2.compute.amazonaws.com';
+
 function Main() {
   let [hotdeals, setHotDeals] = useState([]);
-  // let [top3deals, setTop3Deals] = useState([]);
+
   let [pagenum, setPageNum] = useState('1');
   let nextPageBtn = (num) => {
-    // console.log(num);
     setPageNum(num);
   };
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/deal?&page=${pagenum}&pageSige=10`)
+      .get(`${serverURL}/deal?&page=${pagenum}&pageSige=10`)
       .then((rp) => {
-        // console.log(rp);
         setHotDeals(rp.data);
       })
       .catch((err) => setPageNum(0));

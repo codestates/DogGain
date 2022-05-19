@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Mypage({ user, userInfo, handleLogout }) {
+function Mypage({ userInfo, handleLogout }) {
   const { nickname } = userInfo;
   return (
     <div className='mypage_container'>

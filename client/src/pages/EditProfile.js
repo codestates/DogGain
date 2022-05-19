@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  Link,
-  useHistory,
-} from 'react-router-dom';
-import Header from '../Header';
+import { Link, useHistory } from 'react-router-dom';
 import Footer from '../Footer';
 import SidebarHeader from '../SidebarHeader';
+
+let serverURL = 'http://ec2-52-78-195-243.ap-northeast-2.compute.amazonaws.com';
 
 function EditProfile() {
   const [userInfo, setUserInfo] = useState({
@@ -32,7 +27,7 @@ function EditProfile() {
       setErrMsg('비밀번호가 다릅니다.');
     } else {
       axios
-        .post('http://localhost:8080/user/profile', userInfo, {
+        .post(`${serverURL}/user/profile`, userInfo, {
           headers: { 'Content-Type': 'application/json' },
           withCredentials: true,
         })

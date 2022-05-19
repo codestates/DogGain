@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import axios from 'axios';
 import Login from './Login';
 import Mypage from './Mypage';
 function Sidebar() {
@@ -36,10 +35,6 @@ function Sidebar() {
   ];
   const [isLogin, setIsLogin] = useState(false);
   const [userInfo, setUserInfo] = useState({
-    // username: 'L9628',
-    // password: '1234',
-    // nickname: 'Minhyuk',
-    // email: 'mhp4718@gmail.com',
     username: '',
     password: '',
     nickname: '',
@@ -55,22 +50,14 @@ function Sidebar() {
     isAuth();
   };
   const handleLogout = () => {
-    // axios.post('http://localhost:8080/user/logOut').then(() => {
-    //   setUserInfo(null);
-    //   setIsLogin(false);
-    //   history.push('/');
-    // });
-    // setUserInfo(null);
     setIsLogin(false);
     history.push('/');
     console.log('성공적으로 로그아웃 되셨습니다!');
   };
-  // useEffect(() => {
-  //   isAuth();
-  // }, []);
+
   return (
     <div>
-      <div className="login">
+      <div className='login'>
         {isLogin ? (
           <Mypage user={user} userInfo={userInfo} handleLogout={handleLogout} />
         ) : (
@@ -82,7 +69,6 @@ function Sidebar() {
           />
         )}
       </div>
-      {/* <div className="filter">Filter 컴포넌트</div> */}
     </div>
   );
 }

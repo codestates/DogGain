@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Redirect, Link, useHistory } from 'react-router-dom';
-import Header from '../Header';
+import { Link, useHistory } from 'react-router-dom';
 import Footer from '../Footer';
-import user from '../data/User';
 import SidebarHeader from '../SidebarHeader';
+
+let serverURL = 'http://ec2-52-78-195-243.ap-northeast-2.compute.amazonaws.com';
 
 function Signup() {
   const [userInfo, setUserInfo] = useState({
@@ -29,7 +29,7 @@ function Signup() {
     } else {
       axios
         .post(
-          'http://localhost:8080/user/signUp',
+          `${serverURL}/user/signUp`,
           {
             username: username,
             password: password,
@@ -44,22 +44,6 @@ function Signup() {
         .then(() => {
           window.location.href = '/';
         });
-
-      // const allUser = [...user];
-      // allUser.push({
-      //   id: allUser.length,
-      //   username: username,
-      //   nickname: nickname,
-      //   password: password,
-      //   email: email,
-      // });
-      // history.push('/');
-      // console.log(allUser);
-      // console.log('username: ', username);
-      // console.log('password: ', password);
-      // console.log('passwordCheck: ', passwordCheck);
-      // console.log('nickname: ', nickname);
-      // console.log('email: ', email);
     }
   };
   return (
@@ -116,15 +100,7 @@ function Signup() {
           ></input>
         </div>
         <div className='alert-box'>{errMsg}</div>
-        {/* <Link
-          to="/"
-          className="signup-btn"
-          type="submit"
-          onClick={handleSignup}
-          onClick={() => (window.location.href = '/')}
-        >
-          회원가입
-        </Link> */}
+
         <button type='submit' onClick={handleSignup}>
           회원가입
         </button>

@@ -1,6 +1,5 @@
 import Nav from '../Nav';
 import Sidebar from '../sidebar/Sidebar';
-import Main from '../main/Main';
 import Header from '../Header';
 import Footer from '../Footer';
 import Rule_data from '../Components/Rule_data';

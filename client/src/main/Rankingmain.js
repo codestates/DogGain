@@ -1,4 +1,3 @@
-import Top3ranking from './Top3ranking';
 import Crawling from './Crawling';
 import deals from '../data/Deals';
 import Sorted from './Sorted';
