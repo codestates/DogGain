@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-function Header() {
+function SidebarHeader() {
   return (
-    <header className='home_header'>
+    <header className='sidebar_header'>
       <Link
         onClick={() => (window.location.href = '/')}
         className='logo_linkstyle'
@@ -19,4 +19,4 @@ function Header() {
     </header>
   );
 }
-export default Header;
+export default SidebarHeader;

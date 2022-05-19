@@ -8,7 +8,7 @@ body {
   padding: 0;
 }
 
-header {
+.home_header {
   font-family: 'Arial, Helvetica, sans-serif';
   font-size: 50px;
   font-weight: 500;
@@ -171,6 +171,15 @@ footer {
   text-align: center;
   background: #e9ebee;
 }
+
+.sidebar_header {
+  font-family: 'Arial, Helvetica, sans-serif';
+  font-size: 50px;
+  font-weight: 500;
+  text-align: left;
+  color: #4c7ccf;
+  margin-left: 300px;
+}
 .login {
   background: #ffffff;
   border-right: 5px solid #e9ebee;
@@ -193,7 +202,6 @@ footer {
 .signup {
   text-align: center;
   background-color: #e9ebee;
-  color: brown;
   margin-right: 300px;
   margin-left: 300px;
 }
@@ -214,6 +222,7 @@ footer {
   border-top: 10px solid #e9ebee;
   border-left: 10px solid #e9ebee;
   border-right: 10px solid #e9ebee;
+  width: ;
 }
 
 .pagenation_container {

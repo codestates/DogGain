@@ -9,6 +9,8 @@ import {
 } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
+import SidebarHeader from '../SidebarHeader';
+
 function EditProfile() {
   const [userInfo, setUserInfo] = useState({
     username: '',
@@ -47,7 +49,7 @@ function EditProfile() {
   return (
     <div>
       <div>
-        <Header />
+        <SidebarHeader />
       </div>
       <form className='editprofile' onSubmit={(e) => e.preventDefault()}>
         <h1>회원 정보 수정</h1>

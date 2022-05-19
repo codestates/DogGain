@@ -4,6 +4,8 @@ import { Redirect, Link, useHistory } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
 import user from '../data/User';
+import SidebarHeader from '../SidebarHeader';
+
 function Signup() {
   const [userInfo, setUserInfo] = useState({
     username: '',
@@ -63,7 +65,7 @@ function Signup() {
   return (
     <div>
       <div>
-        <Header />
+        <SidebarHeader />
       </div>
       <form className='signup' onSubmit={(e) => e.preventDefault()}>
         <h1>회원가입</h1>
