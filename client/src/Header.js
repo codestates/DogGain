@@ -5,7 +5,7 @@ function Header() {
     <header className='header'>
       <Link
         onClick={() => (window.location.href = '/')}
-        className='nolinkstyle'
+        className='logo_linkstyle'
         to='/'
       >
         {/* <img

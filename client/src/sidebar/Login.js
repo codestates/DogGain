@@ -70,7 +70,7 @@ function Login({ user, userInfo, setUserInfo, handleLoginSuccess }) {
         to='/Signup'
         onClick={() => (window.location.href = '/Signup')}
       >
-        Signup
+        회원가입
       </Link>
 
       <div className='alert-box'>{errMsg}</div>

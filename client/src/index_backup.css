@@ -76,7 +76,6 @@ footer {
 }
 
 #nav-bar {
-  text-align: center;
   text-decoration: none;
   border: 10px solid #e9ebee;
   padding: 30px;
@@ -85,7 +84,8 @@ footer {
   display: flex;
   font-size: 1.5rem;
   font-weight: bold;
-  width: 50%;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 .realfinal {

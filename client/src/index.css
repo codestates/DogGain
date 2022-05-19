@@ -30,15 +30,26 @@ header {
   color: gray;
 }
 
+.signout-btn {
+  height: 50px;
+}
+
+.signout {
+  text-align: center;
+  background-color: #e9ebee;
+  margin-right: 300px;
+  margin-left: 300px;
+}
+
 .signout_link {
   display: block;
   font-size: 0.7rem;
   text-decoration: none;
   color: inherit;
   text-decoration: inherit;
-  color: gray;
-  text-align: right;
-  margin-right: 100px;
+  color: tomato;
+  text-align: center;
+  margin-left: 55px;
 }
 
 .logo {
@@ -154,6 +165,7 @@ footer {
   margin-left: 300px;
   margin-right: 300px;
 }
+
 .sidebar {
   flex: 1 1 auto;
   text-align: center;
@@ -164,10 +176,7 @@ footer {
   border-right: 5px solid #e9ebee;
   border-left: 15px solid #e9ebee;
   border-top: 10px solid #e9ebee;
-  height: 24.6vh;
-}
-.filter {
-  height: 30vh;
+  height: 10.1rem;
 }
 .main {
   flex: 5 1 auto;
@@ -183,24 +192,22 @@ footer {
 }
 .signup {
   text-align: center;
-  background-color: burlywood;
+  background-color: #e9ebee;
   color: brown;
   margin-right: 300px;
   margin-left: 300px;
 }
 .signup-btn {
-  background-color: brown;
   height: 50px;
 }
 .editprofile {
   text-align: center;
-  background-color: burlywood;
+  background-color: #e9ebee;
   color: brown;
   margin-right: 300px;
   margin-left: 300px;
 }
 .editprofile-btn {
-  background-color: brown;
   height: 50px;
 }
 .top3ranking_container {
@@ -249,6 +256,10 @@ footer {
   padding: 0 0 0 0;
 }
 
+.mypage_container {
+  margin-top: 2rem;
+}
+
 .ranking_label {
   /* border: 3px solid #333; */
   font-size: 1rem;
@@ -266,6 +277,12 @@ footer {
 }
 
 .nolinkstyle {
+  margin-left: 300px;
+  text-decoration: none;
+  color: #4c7ccf;
+}
+
+.logo_linkstyle {
   text-decoration: none;
   color: #4c7ccf;
 }
@@ -334,6 +351,12 @@ footer {
   background-color: thistle;
 }
 
+.deal__createdAt {
+  display: inline-block;
+  color: var(--sub-text-color);
+  margin-left: 0.5rem;
+}
+
 .thumbnail {
   flex: 3;
   border-radius: 1rem;
@@ -379,4 +402,24 @@ footer {
   background-color: #d2d6d9;
   margin: 0.3rem 0.3rem;
   padding: 0.2rem;
+}
+
+.edit_link {
+  text-decoration: none;
+}
+
+/* .logout_btn {
+  margin-bottom: 1px;
+} */
+
+.mypage_content1 {
+  margin-bottom: 5px;
+}
+
+.mypage_content2 {
+  margin-bottom: 5px;
+}
+
+.mypage_content3 {
+  margin-bottom: 5px;
 }

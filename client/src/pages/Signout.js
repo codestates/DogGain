@@ -48,10 +48,10 @@ function Signout() {
       <div>
         <Header />
       </div>
-      <form className="signout" onSubmit={(e) => e.preventDefault()}>
+      <form className='signout' onSubmit={(e) => e.preventDefault()}>
         <h1>회원탈퇴</h1>
-        <div className="return-home">
-          <Link to="/" onClick={() => (window.location.href = '/')}>
+        <div className='return-home'>
+          <Link to='/' onClick={() => (window.location.href = '/')}>
             다시 메인페이지로!
           </Link>
         </div>
@@ -59,41 +59,41 @@ function Signout() {
         <div>
           <div>Username</div>
           <input
-            type="text"
-            placeholder="Username"
+            type='text'
+            placeholder='Username'
             onChange={handleInputValue('username')}
           ></input>
         </div>
         <div>
           <div>Password</div>
           <input
-            type="password"
-            placeholder="Password"
+            type='password'
+            placeholder='Password'
             onChange={handleInputValue('password')}
           ></input>
         </div>
         <div>
           <div>Password 확인</div>
           <input
-            type="password"
-            placeholder="Password"
+            type='password'
+            placeholder='Password'
             onChange={handleInputValue('passwordCheck')}
           ></input>
         </div>
         <div>
           <div>E-mail</div>
           <input
-            type="email"
-            placeholder="E-mail"
+            type='email'
+            placeholder='E-mail'
             onChange={handleInputValue('email')}
           ></input>
         </div>
-        <div className="alert-box">{errMsg}</div>
-        <button className="signout-btn" type="submit" onClick={handleSignout}>
+        <div className='alert-box'>{errMsg}</div>
+        <button type='submit' onClick={handleSignout}>
           회원탈퇴
         </button>
       </form>
-      <div className="foot">
+      <div className='foot'>
         <Footer />
       </div>
     </div>

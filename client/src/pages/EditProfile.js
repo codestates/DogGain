@@ -96,24 +96,19 @@ function EditProfile() {
             placeholder='E-mail'
             onChange={handleInputValue('email')}
           ></input>
-          <div>
-            <Link
-              className='signout_link'
-              to='/Signout'
-              onClick={() => (window.location.href = '/Signout')}
-            >
-              회원탈퇴
-            </Link>
-          </div>
+          <div></div>
         </div>
         <div className='alert-box'>{errMsg}</div>
-        <button
-          className='editprofile-btn'
-          type='submit'
-          onClick={handleEditProfile}
-        >
+        <button type='submit' onClick={handleEditProfile}>
           회원 정보 수정
         </button>
+        <Link
+          className='signout_link'
+          to='/Signout'
+          onClick={() => (window.location.href = '/Signout')}
+        >
+          회원탈퇴
+        </Link>
       </form>
       <div className='foot'>
         <Footer />
