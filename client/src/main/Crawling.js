@@ -23,7 +23,7 @@ function Crawling({ hotdeals }) {
                 <div className='tag-list'>
                   <div className='shopname_tag'>{deal.origin_sitename}</div>
                 </div>
-                <a href={deal.origin_url} className='title_alink'>
+                <a href={deal.origin_url} className='ranking_alink'>
                   {deal.origin_title}
                 </a>
                 {deal.origin_price === 0 ? (
