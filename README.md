@@ -20,23 +20,12 @@
 
 ## Member Introduction
 
-| Name    | Position      | 
-| --------- | ---------- | 
-| 김민성 | Back-End   | 
-| 배현우        |       Back-End         | 
-| 이정윤      | Front-End | 
-| 박민혁 | Front-End    | 
-
-
-
-## Frontend Stack
-![](https://img.shields.io/badge/FRONT-React-61DAFB?style=for-the-badge&logo=React)<br>
-![](https://img.shields.io/badge/FRONT-Redux-764ABC?style=for-the-badge&logo=Redux)
-
-## Backend Stack
-
-![](https://img.shields.io/badge/BACK-Node-3776AB?style=for-the-badge&logo=Node.js) <br>
-![](https://img.shields.io/badge/BACK-Express-092E20?style=for-the-badge)
+| Name   | Position  | Github                                    |
+| ------ | --------- | ----------------------------------------- |
+| 이정윤 | Front-End | [lasags](https://github.com/lasags) |
+| 박민혁 | Front-End | [L9628](https://github.com/L9628)     |
+| 김민성 | Back-End  | [meanjeful](https://github.com/meanjeful)       |
+| 배현우 | Back-End  | [woobaeh](https://github.com/woobaeh)         |
 
 
 
