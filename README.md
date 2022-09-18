@@ -22,7 +22,7 @@
 
 | Name   | Position  | Github                                    |
 | ------ | --------- | ----------------------------------------- |
-| 이정윤 | Front-End | [lasags](https://github.com/lasags) |
+| 이정윤 | Front-End | [lasags](https://github.com/EnSillee) |
 | 박민혁 | Front-End | [L9628](https://github.com/L9628)     |
 | 김민성 | Back-End  | [meanjeful](https://github.com/meanjeful)       |
 | 배현우 | Back-End  | [woobaeh](https://github.com/woobaeh)         |
