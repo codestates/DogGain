@@ -12,12 +12,12 @@ function Navbar() {
 
         <nav className="flex items-center space-x-6 text-blue-50 mt-4 py-4 border-solid border-grey-50 border-b border-[0.25px]">
           <ul className="hidden md:flex md:flex-row items-end space-x-2 ml-2 pl-4 ">
-            <Link to="/home">
+            <Link to="/ranking">
               <li className="text-sm font-semibold px-5 py-0.5 rounded-md hover:bg-blue-20 hover:text-white active:bg-blue-30 ease-in-out hover:scale-100 duration-100">
                 <div>랭킹</div>
               </li>
             </Link>
-            <Link to="/community">
+            <Link to="/forum">
               <li className="text-sm font-semibold px-5 py-0.5 rounded-md hover:bg-blue-20 hover:text-white active:bg-blue-30 ease-in-out hover:scale-100 duration-100">
                 <div>포럼</div>
               </li>

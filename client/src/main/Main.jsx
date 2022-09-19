@@ -3,13 +3,20 @@ import Crawling from './Crawling';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Pagenation from '../Components/Pagenation';
+import comments from '../data/Comments'
+import deals from '../data/Deals'
 
 let serverURL = 'http://ec2-52-78-195-243.ap-northeast-2.compute.amazonaws.com';
 
 function Main() {
-  let [hotdeals, setHotDeals] = useState([]);
+  let [hotdeals, setHotDeals] = useState(deals);
 
   let [pagenum, setPageNum] = useState('1');
+  // let [comments, setComments] = useState(comments)
+
+  console.log(comments, deals)
+
+
   let nextPageBtn = (num) => {
     setPageNum(num);
   };

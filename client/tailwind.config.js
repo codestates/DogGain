@@ -28,7 +28,7 @@ module.exports = {
         70: "#CCCCCC",
         50: "#DBDDD8",
         30: "#FBFBFB",
-        10: "#E3DFC8",
+        10: "#E9EBEE",
       },
       red: "#F55C47",
       blue: {
@@ -407,6 +407,12 @@ module.exports = {
       ],
     },
     fontSize: {
+      "7xs": ["0.15rem", { lineHeight: "0.35rem" }],
+      "6xs": ["0.25rem", { lineHeight: "0.5rem" }],
+      "5xs": ["0.35rem", { lineHeight: "0.6rem" }],
+      "4xs": ["0.45rem", { lineHeight: "0.7rem" }],
+      "3xs": ["0.55rem", { lineHeight: "0.8rem" }],
+      "2xs": ["0.65rem", { lineHeight: "0.9rem" }],
       xs: ["0.75rem", { lineHeight: "1rem" }],
       sm: ["0.875rem", { lineHeight: "1.25rem" }],
       base: ["2rem", { lineHeight: "1.5rem" }],
