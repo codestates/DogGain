@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Ranking from './pages/Ranking';
 import Rule from './pages/Rule';
-import NavBar from './Components/Nav'
+import Navbar from './Components/Navbar'
 import Sidebar from './sidebar/Sidebar';
 import Footer from './Footer';
 import Main from './main/Main';
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-        <NavBar />
+        <Navbar />
         <Sidebar />
           <Switch>
               <Route path="/" exact component={Main} />

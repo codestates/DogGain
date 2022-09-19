@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function NavBar() {
+function Navbar() {
   return (
     <>
       <div>
@@ -10,16 +10,16 @@ function NavBar() {
           </Link>
         </div>
 
-        <nav className="flex items-center space-x-6 text-blue-50 mt-4 py-4 border-solid border-grey-50 border-b-4 border-t">
+        <nav className="flex items-center space-x-6 text-blue-50 mt-4 py-4 border-solid border-grey-50 border-b border-[0.25px]">
           <ul className="hidden md:flex md:flex-row items-end space-x-2 ml-2 pl-4 ">
             <Link to="/home">
               <li className="text-sm font-semibold px-5 py-0.5 rounded-md hover:bg-blue-20 hover:text-white active:bg-blue-30 ease-in-out hover:scale-100 duration-100">
-                <div>홈</div>
+                <div>랭킹</div>
               </li>
             </Link>
             <Link to="/community">
               <li className="text-sm font-semibold px-5 py-0.5 rounded-md hover:bg-blue-20 hover:text-white active:bg-blue-30 ease-in-out hover:scale-100 duration-100">
-                <div>커뮤니티</div>
+                <div>포럼</div>
               </li>
             </Link>
             <Link to="/rule">
@@ -33,4 +33,4 @@ function NavBar() {
     </>
   );
 }
-export default NavBar;
+export default Navbar;
