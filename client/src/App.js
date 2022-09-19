@@ -1,39 +1,26 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
-import Signup from './pages/Signup';
-import Signout from './pages/Signout';
-import EditProfile from './pages/EditProfile';
 import Ranking from './pages/Ranking';
 import Rule from './pages/Rule';
+import NavBar from './Components/Nav'
+import Sidebar from './sidebar/Sidebar';
+import Footer from './Footer';
+import Main from './main/Main';
 
 function App() {
   return (
+    <>
     <BrowserRouter>
-      <div>
-        <div id='content'>
+        <NavBar />
+        <Sidebar />
           <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route path='/Signup'>
-              <Signup />
-            </Route>
-            <Route path='/Signout'>
-              <Signout />
-            </Route>
-            <Route path='/EditProfile'>
-              <EditProfile />
-            </Route>
-            <Route path='/ranking'>
-              <Ranking />
-            </Route>
-            <Route path='/rule'>
-              <Rule />
-            </Route>
+              <Route path="/" exact component={Main} />
+              <Route path="/main" component={Main} />
+              <Route path="/community" component={Ranking} />
+              <Route path="/rule" component={Rule} />
           </Switch>
-        </div>
-      </div>
+        <Footer />
     </BrowserRouter>
+    </>
   );
 }
 

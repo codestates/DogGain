@@ -1,4 +1,4 @@
-const Rule_data = () => {
+const Ruledata = () => {
   return (
     <div className='main_container'>
       <div className='rule_container'>
@@ -20,4 +20,4 @@ const Rule_data = () => {
   );
 };
 
-export default Rule_data;
+export default Ruledata;
