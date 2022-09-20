@@ -2,8 +2,8 @@
 
 function Ranking() {
   return (
-    <div>
-          this is Ranking!!
+    <div className="mt-4">
+          랭킹 기능은 구현중입니다🙇🏻‍♂️
     </div>
   );
 }

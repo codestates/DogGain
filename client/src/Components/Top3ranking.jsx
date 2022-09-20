@@ -1,6 +1,6 @@
 function Top3ranking({ hotdeals }) {
   return (
-    <article className="bg-white p-4 mb-4 ">
+    <article className="bg-white p-4 mb-4 pr-32 ">
       <div className="top_ranking_container">
         <div className="font-semibold text-[color:#66757f] mb-2">조회수 랭킹</div>
         {hotdeals
