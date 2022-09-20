@@ -3,7 +3,7 @@
 function Ranking() {
   return (
     <div>
-          this is Ranking
+          this is Ranking!!
     </div>
   );
 }
