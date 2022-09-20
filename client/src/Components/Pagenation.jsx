@@ -1,6 +1,6 @@
 const Pagenation = ({ nextPage }) => {
   return (
-    <div className='pagenation_container'>
+    <div className='bg-white p-4 mb-4'>
       <button onClick={() => nextPage(1)}>1</button>
       <button onClick={() => nextPage(2)}>2</button>
       <button onClick={() => nextPage(3)}>3</button>

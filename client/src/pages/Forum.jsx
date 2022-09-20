@@ -1,4 +1,4 @@
 function Forum() {
-  return <div></div>;
+  return <div> this is Forum</div>;
 }
 export default Forum;
