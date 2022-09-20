@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Top3ranking from '../components/Top3ranking';
-import Crawling from '../components/Crawling';
-import Pagenation from '../components/Pagenation';
+import Top3ranking from '../Components/Top3ranking';
+import Crawling from '../Components/Crawling';
+import Pagenation from '../Components/Pagenation';
 // import comments from '../data/Comments'
 import deals from '../data/Deals'
 
