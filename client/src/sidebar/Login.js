@@ -32,18 +32,19 @@ function Login({ handleLoginSuccess }) {
     }
   };
   return (
-    <div className='p-2'>
+    <div className='p-6'>
       <div className='text-xs font-medium mb-2'>DogGain 로그인</div>
       <div>
         <input
           placeholder='username'
-          className=''
+          className='text-xs'
           type='string'
           onChange={handleInputValue('username')}
         />
       </div>
       <div>
         <input
+          className='text-xs'
           placeholder='password'
           type='password'
           onChange={handleInputValue('password')}

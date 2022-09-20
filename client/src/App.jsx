@@ -4,7 +4,7 @@ import Rule from './pages/Rule';
 import Navbar from './Components/Navbar'
 import Sidebar from './sidebar/Sidebar';
 import Footer from './Footer';
-import Main from './main/Main';
+import Home from './pages/Home';
 import Forum from './pages/Forum';
 
 function App() {
@@ -12,10 +12,10 @@ function App() {
     <>
     <BrowserRouter>
         <Navbar />
-        <div className='flex'>
+        <div className='flex bg-grey-10'>
         <Sidebar />
           <Switch>
-              <Route path="/" exact component={Main} />
+              <Route path="/" exact component={Home} />
               <Route path="/ranking" component={Ranking} />
               <Route path="/forum" component={Forum} />
               <Route path="/rule" component={Rule} />

@@ -56,8 +56,8 @@ function Sidebar() {
   };
 
   return (
-    <div className='flex flex-col items-center space-x-6 bg-grey-10 p-4'>
-      <div className='bg-white'>
+    <div className='flex flex-col items-center space-x-6 bg-grey-10 p-4 ml-30'>
+      <div className='bg-white ml-12 '>
         {isLogin ? (
           <Mypage user={user} userInfo={userInfo} handleLogout={handleLogout} />
         ) : (
