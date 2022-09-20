@@ -32,7 +32,6 @@ function Home() {
 
   return (
     <div className='items-center p-4'>
-      hello this is home!!
       <Top3ranking hotdeals={hotdeals} />
       {pagenum === 0 ? (
         <div className='bg-white p-4 mb-4'>페이지를 찾을 수 없습니다</div>
