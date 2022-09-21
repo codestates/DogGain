@@ -20,13 +20,13 @@ function Crawling({ hotdeals }) {
                 </div>
 
                 </div>
-                <a href={deal.origin_url} id='ranking_alink' className=' text-lg text-blue-50 text-ellipsis overflow-hidden max-w-3xl mt-2 text-decoration-line:none' >
+                <a href={deal.origin_url} id='ranking_alink' className=' text-sm text-blue-50 text-ellipsis overflow-hidden max-w-3xl mt-2 text-decoration-line:none' >
                   {deal.origin_title}
                 </a>
                 {deal.origin_price === 0 ? (
-                  <div style={{ color: 'tomato' }}>가격정보 없음</div>
+                  <div className='text-xs text-[color:tomato] mt-1'>가격정보 없음</div>
                 ) : (
-                  <div style={{ color: 'tomato' }}>{deal.origin_price}원</div>
+                  <div className='text-xs text-[color:tomato] mt-1'>{deal.origin_price}원</div>
                 )}
               </div>
             </div>
