@@ -32,13 +32,13 @@ function Login({ handleLoginSuccess }) {
     }
   };
   return (
-    <div className="p-6">
-      <div className="text-xs font-medium mb-2">DogGain 로그인</div>
+    <div className="p-10">
+      <div className="text-sm font-medium mb-2">DogGain 로그인</div>
       <div>
         <input
           placeholder="username"
-          className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-xs shadow-sm placeholder-slate-400
-          focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+          className="mt-1 block w-full px-3 py-2 bg-white border-2 border-grey-50 border-slate-300 rounded-md text-xs shadow-sm placeholder-slate-400
+          focus:outline-none focus:border-blue-50 focus:ring-1 focus:ring-blue-50
           disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
           invalid:border-white-500 invalid:text-white-600
           focus:invalid:border-white-500 focus:invalid:ring-white-500"
@@ -48,8 +48,8 @@ function Login({ handleLoginSuccess }) {
       </div>
       <div>
         <input
-          className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-xs shadow-sm placeholder-slate-400
-          focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+          className="mt-1 block w-full px-3 py-2 bg-white border-2 border-grey-50 border-slate-300 rounded-md text-6xs shadow-sm placeholder-slate-400
+          focus:outline-none focus:border-blue-50 focus:ring-1 focus:ring-blue-50
           disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
           invalid:border-white-500 invalid:text-white-600
           focus:invalid:border-white-500 focus:invalid:ring-white-500"
