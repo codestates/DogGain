@@ -1,5 +1,3 @@
-// import { useMediaQuery } from 'react-responsive'
-// import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Sidebar from './sidebar/Sidebar';
 import Footer from "./Components/Footer";

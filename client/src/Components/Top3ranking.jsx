@@ -8,7 +8,7 @@ function Top3ranking({ hotdeals }) {
           .filter((deal, idx) => (idx <= 2 ? deal : undefined))
           .map((deal, idx) => {
             return (
-              <div className="dofinal text-sm font-semibold text-blue-50 mb-1" key={deal.id}>
+              <div className="dofinal text-xs font-semibold text-blue-50 mb-1" key={deal.id}>
                 <span className="ranking_label text-[color:#90949c] mr-2">{idx + 1}위</span>
                 <a href={deal.origin_url} className="ranking_alink">
                   {deal.origin_title}

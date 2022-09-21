@@ -15,7 +15,7 @@ function Signout() {
     email: '',
   });
   const [errMsg, setErrMsg] = useState('');
-  const history = useHistory();
+  // const history = useHistory();
   const handleInputValue = (key) => (e) => {
     setUserInfo({ ...userInfo, [key]: e.target.value });
   };
