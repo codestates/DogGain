@@ -11,10 +11,10 @@ let serverURL = 'http://ec2-52-78-195-243.ap-northeast-2.compute.amazonaws.com';
 function Home() {
   let [hotdeals, setHotDeals] = useState(deals);
 
-  let [pagenum, setPageNum] = useState('1');
+  let [pagenum, setPageNum] = useState(1);
   // let [comments, setComments] = useState(comments)
 
-  console.log(deals)
+  // console.log(deals)
 
 
   let nextPageBtn = (num) => {
@@ -31,14 +31,14 @@ function Home() {
   }, [pagenum]);
 
   return (
-    <div className='items-center mt-4'>
+    <div className='mt-4'>
       <Top3ranking hotdeals={hotdeals} />
       {pagenum === 0 ? (
-        <div className='bg-white p-4 mb-4'>페이지를 찾을 수 없습니다</div>
+        <div className='bg-white p-4 mb-4 h-40 '>페이지를 찾을 수 없습니다</div>
       ) : (
         <Crawling hotdeals={hotdeals} />
       )}
-      <Pagenation nextPage={nextPageBtn} />
+      <Pagenation pagenum={pagenum} nextPage={nextPageBtn} />
     </div>
   );
 }

@@ -1,11 +1,56 @@
-const Pagenation = ({ nextPage }) => {
+const Pagenation = ({ pagenum, nextPage }) => {
   return (
-    <div className='bg-white p-4 mb-4'>
-      <button className="bg-green-50 rounded-sm border-2 hover:bg-blue-50 active:bg-blue-70 focus:outline-dashed focus:ring focus:ring-blue-30" onClick={() => nextPage(1)}>1</button>
-      <button onClick={() => nextPage(2)}>2</button>
-      <button onClick={() => nextPage(3)}>3</button>
-      <button onClick={() => nextPage(4)}>4</button>
-      <button onClick={() => nextPage(5)}>5</button>
+    <div className="flex justify-end mb-4 ml-auto">
+      <button
+        className={`${
+          pagenum === 1
+            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
+        }`}
+        onClick={() => nextPage(1)}
+      >
+        1
+      </button>
+      <button
+        className={`${
+          pagenum === 2
+            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
+        }`}
+        onClick={() => nextPage(2)}
+      >
+        2
+      </button>
+      <button
+        className={`${
+          pagenum === 3
+            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
+        }`}
+        onClick={() => nextPage(3)}
+      >
+        3
+      </button>
+      <button
+        className={`${
+          pagenum === 4
+            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
+        }`}
+        onClick={() => nextPage(4)}
+      >
+        4
+      </button>
+      <button
+        className={`${
+          pagenum === 5
+            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
+        }`}
+        onClick={() => nextPage(5)}
+      >
+        5
+      </button>
     </div>
   );
 };
