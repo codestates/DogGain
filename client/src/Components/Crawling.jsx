@@ -16,6 +16,12 @@ function Crawling({ hotdeals }) {
                   >
                     {deal.origin_sitename}
                   </div>
+                  <div
+                    id="shopname_tag"
+                    className=" text-white text-6xs font-semibold display: inline-block rounded-md bg-[color:#FAD4D5] my-1 ml-2 p-1 "
+                  >
+                    {deal.origin_shopname}
+                  </div>
 
                   <div
                     id="origin_user"
