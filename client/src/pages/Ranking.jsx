@@ -10,15 +10,12 @@ function Ranking() {
   const [dealsRanking, setDealsRanking] = useState(deals)
 
   const dealsFilter = (deals) => {
-    return deals.sort((a,b) => b.origin_views = a.origin_views)
-    
+    return deals.slice().sort((a,b) => b.origin_views - a.origin_views)
   }
 
-  console.log(dealsFilter(dealsRanking).map(el => Number(el.origin_views)))
-
-  // useEffect(() => {
-  //   setDealsRanking(dealsFilter(dealsRanking))
-  // },[dealsRanking])
+  useEffect(() => {
+    setDealsRanking(deal => dealsFilter(deals))
+  },[deals])
 
   // {hotdeals.slice()
   //   .sort((a, b) => b.origin_views - a.origin_views)
@@ -36,7 +33,7 @@ function Ranking() {
 
   return (
     <div className="mt-4">
-          <Crawling hotdeals={deals} />
+          <Crawling hotdeals={dealsRanking} />
     </div>
   );
 }
