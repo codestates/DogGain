@@ -34,7 +34,7 @@ function Login({ handleLoginSuccess }) {
   return (
     <div className="p-10">
       <div className="text-sm font-medium mb-2">DogGain 로그인</div>
-      <div>
+      <form>
         <input
           placeholder="username"
           className="mt-1 block w-full px-3 py-2 bg-white border-2 border-grey-50 border-slate-300 rounded-md text-xs shadow-sm placeholder-slate-400
@@ -43,10 +43,11 @@ function Login({ handleLoginSuccess }) {
           invalid:border-white-500 invalid:text-white-600
           focus:invalid:border-white-500 focus:invalid:ring-white-500"
           type="string"
+          autoComplete='username'
           onChange={handleInputValue('username')}
         />
-      </div>
-      <div>
+      </form>
+      <form>
         <input
           className="mt-1 block w-full px-3 py-2 bg-white border-2 border-grey-50 border-slate-300 rounded-md text-6xs shadow-sm placeholder-slate-400
           focus:outline-none focus:border-blue-50 focus:ring-1 focus:ring-blue-50
@@ -54,10 +55,11 @@ function Login({ handleLoginSuccess }) {
           invalid:border-white-500 invalid:text-white-600
           focus:invalid:border-white-500 focus:invalid:ring-white-500"
           placeholder="password"
+          autoComplete='current_password'
           type="password"
           onChange={handleInputValue('password')}
         />
-      </div>
+      </form>
 
       <div>
         <button className="text-xs mt-6 ml-6 rounded-md hover:bg-blue-50 hover:text-white  hover:scale-125 duration-200" onClick={handleLogin}>
