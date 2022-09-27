@@ -2,7 +2,7 @@ import { FaUserAlt } from 'react-icons/fa';
 
 function Crawling({ hotdeals }) {
   return (
-    <article className="crawling_container">
+    <article className="crawling_container w-7/8">
       <div className="sumofviews_rank">
         {hotdeals.map((deal, idx) => {
           return (

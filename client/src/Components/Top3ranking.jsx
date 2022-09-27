@@ -2,7 +2,7 @@ import {Link} from "react-router-dom"
 
 function Top3ranking({ hotdeals }) {
   return (
-    <article className="bg-white p-4 mb-4 ">
+    <article className="w-7/8 bg-white p-4 mb-4 ">
       <div className="top_ranking_container w-96">
         <div className="flex">
           <div className="font-semibold text-[color:#66757f] mb-2">조회수 랭킹</div>
