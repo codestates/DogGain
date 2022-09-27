@@ -5,7 +5,7 @@ import Crawling from '../Components/Crawling';
 import Pagenation from '../Components/Pagenation';
 import deals from '../data/Deals'
 
-let serverURL = 'http://ec2-52-78-195-243.ap-northeast-2.compute.amazonaws.com';
+// let serverURL = 'http://ec2-52-78-195-243.ap-northeast-2.compute.amazonaws.com';
 
 function Home() {
   let [hotdeals, setHotDeals] = useState(deals);
@@ -16,14 +16,14 @@ function Home() {
     setPageNum(num);
   };
 
-  useEffect(() => {
-    axios
-      .get(`${serverURL}/deal?&page=${pagenum}&pageSige=10`)
-      .then((rp) => {
-        setHotDeals(rp.data);
-      })
-      .catch((err) => setPageNum(0));
-  }, [pagenum]);
+  // useEffect(() => {
+  //   axios
+  //     .get(`${serverURL}/deal?&page=${pagenum}&pageSige=10`)
+  //     .then((rp) => {
+  //       setHotDeals(rp.data);
+  //     })
+  //     .catch((err) => setPageNum(0));
+  // }, [pagenum]);
 
   return (
     <div className='mt-4'>

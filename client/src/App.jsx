@@ -15,7 +15,7 @@ function App() {
     <>
     <BrowserRouter>
     <Navbar/>
-    <div className='flex bg-grey-10'>
+    <div className='flex bg-grey-10 h-[47rem]'>
         <Sidebar />
         <Switch>
               <Route path="/" exact component={Home} />
