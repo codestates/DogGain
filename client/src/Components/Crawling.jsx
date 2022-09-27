@@ -2,11 +2,11 @@ import { FaUserAlt } from 'react-icons/fa';
 
 function Crawling({ hotdeals }) {
   return (
-    <article className="crawling_container w-7/8">
+    <article className="crawling_containe ">
       <div className="sumofviews_rank">
         {hotdeals.map((deal, idx) => {
           return (
-            <div className="bg-white p-4 mb-4" key={deal.id}>
+            <div className="bg-white p-4 mb-4  w-412" key={deal.id}>
               <div style={{ flex: 0.1 }}></div>
               <div className="dofinal" style={{ flex: 8 }}>
                 <div className="flex items-center text-2xs">
