@@ -1,6 +1,6 @@
 const Pagenation = ({ pagenum, nextPage }) => {
   return (
-    <div className="flex justify-end mb-4 ml-auto">
+    <div className="flex justify-end mb-3 ml-auto">
       <button
         className={`${
           pagenum === 1

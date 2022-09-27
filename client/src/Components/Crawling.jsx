@@ -47,7 +47,7 @@ function Crawling({ hotdeals }) {
                     가격정보 없음
                   </div>
                 ) : (
-                  <div className="text-xs text-[color:tomato] mt-1">
+                  <div className="text-xs text-[color:tomato]">
                     {deal.origin_price}원
                   </div>
                 )}
