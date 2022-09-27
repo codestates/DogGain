@@ -2,7 +2,7 @@ const Ruledata = () => {
   return (
     <div>
       <ul className="">
-        <div className=" text-grey-80 font-semibold mt-4 mb-2">이 용 규 칙</div>
+        <div className="text-grey-80 font-semibold mt-4 mb-2">이 용 규 칙</div>
         <hr className="mb-4" />
         <li className=" text-green-50"  />
         1. 회원간 서로 배려, 예의를 지켜주세요.

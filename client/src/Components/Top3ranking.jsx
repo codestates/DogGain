@@ -12,7 +12,7 @@ function Top3ranking({ hotdeals }) {
           <div>더보기</div>
           </Link>
         </div>
-        {hotdeals
+        {hotdeals.slice()
           .sort((a, b) => b.origin_views - a.origin_views)
           .filter((deal, idx) => (idx <= 2 ? deal : undefined))
           .map((deal, idx) => {

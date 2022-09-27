@@ -4,7 +4,7 @@ const Pagenation = ({ pagenum, nextPage }) => {
       <button
         className={`${
           pagenum === 1
-            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            ? 'text-sm text-blue-50 font-semibold ml-2 bg-grey-10'
             : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
         }`}
         onClick={() => nextPage(1)}
@@ -14,7 +14,7 @@ const Pagenation = ({ pagenum, nextPage }) => {
       <button
         className={`${
           pagenum === 2
-            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            ? 'text-sm text-blue-50 font-semibold ml-2 bg-grey-10'
             : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
         }`}
         onClick={() => nextPage(2)}
@@ -24,7 +24,7 @@ const Pagenation = ({ pagenum, nextPage }) => {
       <button
         className={`${
           pagenum === 3
-            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            ? 'text-sm text-blue-50 font-semibold ml-2 bg-grey-10'
             : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
         }`}
         onClick={() => nextPage(3)}
@@ -34,7 +34,7 @@ const Pagenation = ({ pagenum, nextPage }) => {
       <button
         className={`${
           pagenum === 4
-            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            ? 'text-sm text-blue-50 font-semibold ml-2 bg-grey-10'
             : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
         }`}
         onClick={() => nextPage(4)}
@@ -44,7 +44,7 @@ const Pagenation = ({ pagenum, nextPage }) => {
       <button
         className={`${
           pagenum === 5
-            ? 'text-xs font-semibold ml-2 bg-grey-10'
+            ? 'text-sm text-blue-50 font-semibold ml-2 bg-grey-10'
             : 'text-xs ml-2 border-[0.5px] p-[0.1rem] rounded-sm bg-white active:bg-grey-10 focus-ring focus:ring-grey-10'
         }`}
         onClick={() => nextPage(5)}
